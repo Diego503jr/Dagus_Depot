@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="../img/flavicon.png" type="image/x-icon">
+
+  <title>DAGUS | Productos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- header incluido x medio de ID -->
+  <div id="header"></div>
+
+  <div class="container">
+    <!-- Sidebar de filtros -->
+    <aside class="filters-sidebar">
+      <div class="breadcrumb">Inicio > Linea Blanca</div>
+
+      <h2>Filtros</h2>
+
+      <form action="productos.html" method="GET">
+       
+
+       
+
+        <div class="filter-section">
+          <h3>Marcas</h3>
+          <ul class="filter-options">
+            <li><label><input type="checkbox" name="marca" value="">---</label></li>
+            <li><label><input type="checkbox" name="marca" value="">----</label></li>
+            <li><label><input type="checkbox" name="marca" value="">---</label></li>
+            <li><label><input type="checkbox" name="marca" value="">---</label></li>
+            <li><label><input type="checkbox" name="marca" value="">---</label></li>
+          </ul>
+        </div>
+        
+        <div class="filter-section">
+            <h3>Precio</h3>
+            <div class="price-range">
+              <span>$10,000</span>
+              <span id="price-display">$25,000</span>
+            </div>
+            <input type="range" id="precioMax" min="10000" max="25000" value="20000" style="width: 100%;">
+          </div>
+  
+
+        <div class="filter-section">
+          <h3>Tamaños</h3>
+          <ul class="filter-options">
+            <li><label><input type="checkbox" name="tamano" value="Pequeño"> Pequeño</label></li>
+            <li><label><input type="checkbox" name="tamano" value="Mediano"> Mediano</label></li>
+            <li><label><input type="checkbox" name="tamano" value="Grande"> Grande</label></li>
+            <li><label><input type="checkbox" name="tamano" value="Extra Grande"> Extra Grande</label></li>
+          </ul>
+        </div>
+        <div class="filter-section">
+            <h3>Color</h3>
+            <ul class="filter-options">
+              <li><label><input type="checkbox" name="color" value="---"> ---</label></li>
+              <li><label><input type="checkbox" name="color" value="---">----</label></li>
+              <li><label><input type="checkbox" name="color" value="---">---</label></li>
+              <li><label><input type="checkbox" name="color" value="---">---</label></li>
+              <li><label><input type="checkbox" name="color" value="---">---</label></li>
+            </ul>
+          </div>
+
+      </form>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <h1 class="category-title">Linea Blanca</h1>
+
+      <div class="results-info" id="info-resultados">
+        <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span> |
+        Ordenar por:
+        <select class="sort-options">
+          <option value="popular">Más populares</option>
+          <option value="price-asc">Precio (menor a mayor)</option>
+          <option value="price-desc">Precio (mayor a menor)</option>
+          <option value="newest">Novedades</option>
+      </select>
+      </div>
+      
+
+      <div class="products-grid" id="products-container">
+        <!-- Producto 1 -->
+        <div class="product-card" data-precio="24999" data-color="rojo" data-categoria="" data-marca="" data-date="2023-05-01" data-popularity="150" data-tamano="Grande">
+          <div class="product-image">
+            <img src="../img/" alt="Refrigerador Side by Side" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Refrigerador Side by Side</h3>
+            <div class="product-price">$25,999</div>
+          </div>
+        </div>
+    
+        <!-- Producto 2 -->
+        <div class="product-card" data-precio="12799" data-color="verde" data-categoria="Lavadoras" data-marca="LG" data-tamano="Grande" data-date="2023-06-15" data-popularity="120">
+          <div class="product-image">
+            <img src="../img/" alt="Lavadora Carga Frontal" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Lavadora Carga Frontal</h3>
+            <div class="product-price">
+              <span class="old-price">$15,999</span>
+              <span>$12,799</span>
+              <span class="discount">20%</span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Producto 3 -->
+        <div class="product-card" data-precio="3499" data-categoria="Hornos" data-marca="Panasonic" data-tamano="Pequeño" data-date="2023-07-20" data-popularity="90">
+          <div class="product-image">
+            <img src="../img/" alt="Horno de Microondas" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Horno de Microondas</h3>
+            <div class="product-price">$3,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 4 -->
+        <div class="product-card" data-precio="19999" data-categoria="Televisores" data-marca="Sony" data-tamano="Grande" data-date="2023-04-10" data-popularity="180">
+          <div class="product-image">
+            <img src="../img/" alt="TV OLED 55&quot;" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">TV OLED 55"</h3>
+            <div class="product-price">$19,999</div>
+          </div>
+        </div>
+    
+        <!-- Producto 5 -->
+        <div class="product-card" data-precio="17999" data-categoria="Computadoras" data-marca="HP" data-tamano="Mediano" data-date="2023-08-05" data-popularity="110">
+          <div class="product-image">
+            <img src="../img/" alt="Laptop Ultrabook" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Laptop Ultrabook</h3>
+            <div class="product-price">
+              <span class="old-price">$22,499</span>
+              <span>$17,999</span>
+              <span class="discount">20%</span>
+            </div>
+          </div>
+        </div>
+    
+        <!--  6-->
+        <div class="product-card" data-precio="8499" data-categoria="Lavadora" data-marca="Mabe" data-tamano="Mediano" data-date="2023-09-12" data-popularity="85">
+          <div class="product-image">
+            <img src="../img/" alt="Lavadora" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Lavadora</h3>
+            <div class="product-price">
+              <span class="old-price">$1,000</span>
+              <span>$500</span>
+              <span class="discount">50%</span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- producto 7 -->
+        <div class="product-card" data-precio="8499" data-categoria="Lavadora" data-marca="Mabe" data-tamano="Mediano" data-date="2023-03-25" data-popularity="70">
+          <div class="product-image">
+            <img src="../img/" alt="Lavadora" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Lavadora</h3>
+            <div class="product-price">$1,000</div>
+          </div>
+        </div>
+    
+        <!-- Product0 8 -->
+        <div class="product-card" data-precio="8499" data-categoria="Celular" data-marca="Mabe" data-tamano="Mediano" data-date="2023-10-01" data-popularity="95">
+          <div class="product-image">
+            <img src="../img/" alt="Iphone 13" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Produc o 9 -->
+        <div class="product-card" data-precio="8499" data-categoria="" data-marca="Mabe" data-tamano="Mediano" data-date="2023-02-18" data-popularity="60">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto s10-->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-11-15" data-popularity="130">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 11 -->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-01-10" data-popularity="55">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 12-->
+        <div class="product-card" data-precio="24999" data-categoria="Refrigerador" data-marca="Samsung" data-tamano="Grande" data-date="2023-07-30" data-popularity="140">
+          <div class="product-image">
+            <img src="../img/" alt="Refrigerador Side by Side" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Refrigerador Side by Side</h3>
+            <div class="product-price">$24,999</div>
+          </div>
+        </div>
+    
+        <!-- Producto 13 -->
+        <div class="product-card" data-precio="12799" data-categoria="Lavadora" data-marca="LG" data-tamano="Grande" data-date="2023-05-22" data-popularity="115">
+          <div class="product-image">
+            <img src="../img/" alt="Lavadora Carga Frontal" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Lavadora Carga Frontal</h3>
+            <div class="product-price">
+              <span class="old-price">$15,999</span>
+              <span>$12,799</span>
+              <span class="discount">20%</span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Producto 14 -->
+        <div class="product-card" data-precio="3499" data-categoria="Electrodoméstico" data-marca="Panasonic" data-tamano="Pequeño" data-date="2023-09-01" data-popularity="100">
+          <div class="product-image">
+            <img src="../img/" alt="Horno de Microondas" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Horno de Microondas</h3>
+            <div class="product-price">$3,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 15-->
+        <div class="product-card" data-precio="19999" data-categoria="Televisión" data-marca="Sony" data-tamano="Grande" data-date="2023-06-10" data-popularity="160">
+          <div class="product-image">
+            <img src="../img/" alt="TV OLED 55&quot;" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">TV OLED 55"</h3>
+            <div class="product-price">$19,999</div>
+          </div>
+        </div>
+    
+        <!-- Producto 16-->
+        <div class="product-card" data-precio="17999" data-categoria="Computadora" data-marca="HP" data-tamano="Mediano" data-date="2023-04-05" data-popularity="125">
+          <div class="product-image">
+            <img src="../img/" alt="Laptop Ultrabook" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Laptop Ultrabook</h3>
+            <div class="product-price">
+              <span class="old-price">$22,499</span>
+              <span>$17,999</span>
+              <span class="discount">20%</span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Producto 17-->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-08-20" data-popularity="105">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 18 -->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-07-05" data-popularity="80">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 19 -->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-03-15" data-popularity="65">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">--</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 20-->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-10-30" data-popularity="145">
+          <div class="product-image">
+            <img src="../img/" alt="Aire Acondicionado" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    
+        <!-- Producto 21-->
+        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-02-28" data-popularity="50">
+          <div class="product-image">
+            <img src="../img/" alt="---" width="160">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aire Acondicionado</h3>
+            <div class="product-price">$8,499</div>
+          </div>
+        </div>
+    </div>
+
+      <!-- Paginación -->
+      <div id="pagination" class="pagination">
+        <a href="#" id="prev">Anterior</a>
+
+        <a href="#" id="next">Siguiente</a>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- fpooter incluido x medio de ID -->
+  <div id="footer"></div>
+
+  <script src="/Js/animacion.js"></script>
+  <script src="/Js/duplicados.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--LIBRERIA DE SWEET ALERT-->
+
+</body>
+
+</html>
