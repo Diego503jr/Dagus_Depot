@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroText = document.querySelector('.hero-text');
     const heroImage = document.querySelector('.hero-image');
     const statsItems = document.querySelectorAll('.stats div');
+    const faqs = document.querySelectorAll('.faq-item');
+    faqs.forEach(faq => {
+      faq.querySelector('.faq-question').addEventListener('click', () => {
+        faqs.forEach(f => { if (f !== faq) f.classList.remove('active'); });
+        faq.classList.toggle('active');
+      });
+    });
   
     // Función para remover todas las animaciones
     function resetAnimations() {
@@ -190,7 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const marcas = getCheckedValues('marca');
       const tamanos = getCheckedValues('tamano');
       const colores = getCheckedValues('color');  // Obtener colores seleccionados
-  
+      const definiciones = getCheckedValues('definicion');
+      const pulgadas = getCheckedValues('pulgada');
+
       priceDisplay.textContent = formatearPrecio(precioMax);
       productosFiltrados = [];
   
@@ -200,12 +209,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const marca = producto.getAttribute('data-marca');
         const tamano = producto.getAttribute('data-tamano');
         const color = producto.getAttribute('data-color');  // Obtener el color del producto
-  
+        const definicion = producto.getAttribute('data-definicion');
+        const pulgada = producto.getAttribute('data-pulgada');
+
         const cumple =
           precio <= precioMax &&
           (categorias.length === 0 || categorias.includes(categoria)) &&
           (marcas.length === 0 || marcas.includes(marca)) &&
           (colores.length === 0 || colores.includes(color)) &&  // Verificar color seleccionado
+          (definiciones.length === 0 || definiciones.includes(definicion)) &&
+          (pulgadas.length === 0 || pulgadas.includes(pulgada)) &&
           (tamanos.length === 0 || tamanos.includes(tamano));
   
         if (cumple) productosFiltrados.push(producto);
@@ -364,3 +377,4 @@ document.querySelector(".checkout-form").addEventListener("submit", function (e)
       }
     });
   });
+  
