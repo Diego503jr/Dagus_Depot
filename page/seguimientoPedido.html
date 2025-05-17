@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAGUS depot</title>
+    <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/seguimientoPedido.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header" class="active"></div>
+
+    <section class="tracking-section">
+      <div class="tracking-container">
+        <h2>Seguimiento del Pedido</h2>
+
+        <img class="airplane" src="../img/seguimiento/avion.png" alt="avion" />
+
+        <div class="order-info">
+          <p><strong>Número de pedido:</strong> #123456789</p>
+          <p><strong>Fecha:</strong> 17 mayo 2025</p>
+          <p><strong>Estado actual:</strong> En camino</p>
+          <p><strong>Envío a:</strong> Av. Siempre Viva 742, Springfield</p>
+        </div>
+
+        <div class="tracking-progress">
+          <div class="step completed">Confirmado</div>
+          <div class="step completed">En preparación</div>
+          <div class="step active">En camino</div>
+          <div class="step">Entregado</div>
+        </div>
+
+        <div class="order-summary">
+          <h2>Resumen del Pedido</h2>
+
+          <div class="order-item">
+            <div class="order-details">
+              <img src="/images/laptop.png" alt="Laptop HP" />
+              <div>
+                <p class="product-name">Laptop HP 15.6" Ryzen 5</p>
+                <p class="quantity">Cantidad: 1</p>
+                <p class="price">Precio: $13,499.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-details">
+              <img src="/images/lavadora.png" alt="Lavadora LG" />
+              <div>
+                <p class="product-name">Lavadora LG</p>
+                <p class="quantity">Cantidad: 2</p>
+                <p class="price">Precio: $1,299.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-details">
+              <img src="/images/mouse.png" alt="Mouse Logitech" />
+              <div>
+                <p class="product-name">Mouse Gamer Logitech G203 RGB</p>
+                <p class="quantity">Cantidad: 1</p>
+                <p class="price">Precio: $549.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="total-price">
+            <strong>Total pagado:</strong> $15,180.40
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="/Js/animacion.js"></script>
+    <script src="/Js/duplicados.js"></script>
+  </body>
+</html>
