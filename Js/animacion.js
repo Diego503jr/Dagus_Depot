@@ -3,13 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroText = document.querySelector('.hero-text');
     const heroImage = document.querySelector('.hero-image');
     const statsItems = document.querySelectorAll('.stats div');
-    const faqs = document.querySelectorAll('.faq-item');
-    faqs.forEach(faq => {
-      faq.querySelector('.faq-question').addEventListener('click', () => {
-        faqs.forEach(f => { if (f !== faq) f.classList.remove('active'); });
-        faq.classList.toggle('active');
-      });
-    });
   
     // Función para remover todas las animaciones
     function resetAnimations() {
