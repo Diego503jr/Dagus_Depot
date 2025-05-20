@@ -1,0 +1,20 @@
+.product-image img.custom-height {
+  height: 95% !important;
+  width: auto;
+  position: static;
+  transform: none;
+  left: auto;
+  top: auto;
+  display: block;
+  margin: 0 auto;
+}
+.product-image img.custom-height-image {
+  height: 100% !important;
+  width: 85%;
+  position: static;
+  transform: none;
+  left: auto;
+  top: auto;
+  display: block;
+  margin: 0 auto;
+}
