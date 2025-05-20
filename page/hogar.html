@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/hogar.css">
+    <link rel="icon" href="../img/flavicon.png" type="image/x-icon">
+
+    <title>DAGUS | Productos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header incluido x medio de ID -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- Sidebar de filtros -->
+        <aside class="filters-sidebar">
+            <div class="breadcrumb">Inicio > Hogar</div>
+
+            <h2>Filtros</h2>
+
+            <form action="productos.html" method="GET">
+
+
+                <div class="filter-section">
+                    <h3>Marcas</h3>
+                    <ul class="filter-options">
+                        <li><label><input type="checkbox" name="marca" value="T-fal"> T-fal</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Home Collection"> Home Collection</label>
+                        </li>
+                        <li><label><input type="checkbox" name="marca" value="Philips"> Philips</label></li>
+                        <li><label><input type="checkbox" name="marca" value="GardenPro"> GardenPro</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Indurama"> Indurama</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Tramontina"> Tramontina</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Black+Decker"> Black+Decker</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Atmosphera"> Atmosphera</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Corona"> Corona</label></li>
+                        <li><label><input type="checkbox" name="marca" value="Geneva"> Geneva</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Categorías</h3>
+                    <ul class="filter-options">
+                        <li><label><input type="checkbox" name="categoria" value="Cocina"> Cocina</label></li>
+                        <li><label><input type="checkbox" name="categoria" value="Cafe y te"> Café y Té</label></li>
+                        <li><label><input type="checkbox" name="categoria" value="Pequeños Electrodomésticos"> Pequeños
+                                Electrodomésticos</label></li>
+                        <li><label><input type="checkbox" name="categoria" value="Organización"> Organización</label>
+                        </li>
+                        <li><label><input type="checkbox" name="categoria" value="Decoración"> Decoración</label></li>
+                        <li><label><input type="checkbox" name="categoria" value="Baño"> Baño</label></li>
+                        <li><label><input type="checkbox" name="categoria" value="Jardín"> Jardín</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Precio</h3>
+                    <div class="price-range">
+                        <span>$1.75</span>
+                        <span id="price-display">$80</span>
+                    </div>
+                    <input type="range" id="precioMax" min="1.75" max="80" value="80" step="0.01" style="width: 100%;">
+                </div>
+
+
+                <div class="filter-section">
+                    <h3>Tamaños</h3>
+                    <ul class="filter-options">
+                        <li><label><input type="checkbox" name="tamano" value="Pequeño"> Pequeño</label></li>
+                        <li><label><input type="checkbox" name="tamano" value="Mediano"> Mediano</label></li>
+                        <li><label><input type="checkbox" name="tamano" value="Grande"> Grande</label></li>
+                        <li><label><input type="checkbox" name="tamano" value="Extra Grande"> Extra Grande</label></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h3>Color</h3>
+                    <ul class="filter-options">
+                        <li><label><input type="checkbox" name="color" value="Negro"> Negro</label></li>
+                        <li><label><input type="checkbox" name="color" value="Gris"> Gris</label></li>
+                        <li><label><input type="checkbox" name="color" value="Blanco"> Blanco</label></li>
+                        <li><label><input type="checkbox" name="color" value="Verde"> Verde</label></li>
+                        <li><label><input type="checkbox" name="color" value="Azul"> Azul</label></li>
+                        <li><label><input type="checkbox" name="color" value="Rojo"> Rojo</label></li>
+                        <li><label><input type="checkbox" name="color" value="Baige"> Baige</label></li>
+                        <li><label><input type="checkbox" name="color" value="Cafe"> Cafe</label></li>
+                        <li><label><input type="checkbox" name="color" value="Acero"> Acero</label></li>
+                        <li><label><input type="checkbox" name="color" value="Varios"> Varios</label></li>
+                    </ul>
+                </div>
+
+            </form>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <h1 class="category-title">Hogar</h1>
+
+            <div class="results-info" id="info-resultados">
+                <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span> |
+                Ordenar por:
+                <select class="sort-options">
+                    <option value="popular">Más populares</option>
+                    <option value="price-asc">Precio (menor a mayor)</option>
+                    <option value="price-desc">Precio (mayor a menor)</option>
+                    <option value="newest">Novedades</option>
+                </select>
+            </div>
+
+
+            <div class="products-grid" id="products-container">
+                <!-- Producto 1 -->
+                <div class="product-card" data-precio="41.95" data-categoria="Cafe y te" data-color="Negro"
+                    data-tamano="Mediano" data-fecha="2024-03-15">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/TeteraTermica.jpg" alt="Tetera con Vasos Termicos" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tetera con vasos Termicos</h3>
+                        <div class="product-price">$41.95</div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card" data-precio="35.99" data-categoria="Cocina" data-marca="T-fal"
+                    data-color="Negro" data-tamano="Mediano" data-fecha="2024-03-10">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Sarten-T-fal.png" alt="Sartén T-fal" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sartén Antiadherente T-fal 24cm</h3>
+                        <div class="product-price">$35.99</div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card" data-precio="25" data-categoria="Organización" data-marca="Home Collection"
+                    data-color="Gris" data-tamano="Grande" data-fecha="2024-03-05">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Ropa-Organizador.png" alt="Organizador de Closet" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Organizador de Closet 4 Compartimentos</h3>
+                        <div class="product-price">$25.00</div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card" data-precio="42.90" data-categoria="Decoración" data-marca="Philips"
+                    data-color="Blanco" data-tamano="Pequeño" data-fecha="2024-03-01">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Lamparas-Philips.png" alt="Lámpara de Mesa" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lámpara de Mesa LED Philips</h3>
+                        <div class="product-price">$42.90</div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card" data-precio="16.00" data-categoria="Baño" data-marca="Home Collection"
+                    data-color="Verde" data-tamano="Pequeño" data-fecha="2024-02-28">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Toallas-HomeCollection.jpg" alt="Set de Toallas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 4 Toallas Algodón</h3>
+                        <div class="product-price">$16.00</div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card" data-precio="12.99" data-categoria="Jardín" data-marca="GardenPro"
+                    data-color="Varios" data-tamano="Mediano" data-fecha="2024-02-25">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Macetas.png" alt="Set de Macetas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 3 Macetas Decorativas</h3>
+                        <div class="product-price">$12.99</div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="product-card" data-precio="40" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="Indurama" data-color="Negro" data-tamano="Mediano" data-fecha="2024-02-20">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Cafetera-Indurama.png" alt="Cafetera Indurama" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cafetera Programable 12 Tazas</h3>
+                        <div class="product-price">$40</div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="product-card" data-precio="20" data-categoria="Cocina" data-marca="Tramontina"
+                    data-color="Acero" data-tamano="Pequeño" data-fecha="2024-02-15">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Cubiertos-Tramontina.jpg" alt="Set de Cubiertos" width="160">
+
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de Cubiertos Tramontina 16 piezas</h3>
+                        <div class="product-price">$20</div>
+                    </div>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="product-card" data-precio="29.99" data-categoria="Organización" data-marca="Home Collection"
+                    data-tamano="Mediano" data-color="Gris" data-fecha="2024-02-10">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Organizador-HomeCollection.png" alt="Organizador de Cajones"
+                            width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Organizador de Cajones 8 Compartimentos</h3>
+                        <div class="product-price">$29.99</div>
+                    </div>
+                </div>
+
+                <!-- Producto 10 -->
+                <div class="product-card" data-precio="35" data-categoria="Decoración" data-marca="Philips"
+                    data-tamano="Pequeño" data-color="Negro" data-fecha="2024-02-05">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Lampara-Pared.jpg" alt="Lámpara de Pared" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lámpara de Pared LED</h3>
+                        <div class="product-price">$35</div>
+                    </div>
+                </div>
+
+                <!-- Producto 11 -->
+                <div class="product-card" data-precio="28.50" data-categoria="Baño" data-marca="Home Collection"
+                    data-tamano="Pequeño" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Set-Baño.jpg" alt="Set de Accesorios de Baño" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de Accesorios de Baño (4 piezas)</h3>
+                        <div class="product-price">$28.50</div>
+                    </div>
+                </div>
+
+                <!-- Producto 12 -->
+                <div class="product-card" data-precio="79.95" data-categoria="Cocina" data-marca="Tramontina"
+                    data-tamano="Mediano" data-color="Gris">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Olla-Tramontina.jpg" alt="Olla Tramontina" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Olla de Acero Inoxidable Tramontina 5L</h3>
+                        <div class="product-price">$79.95</div>
+                    </div>
+                </div>
+
+                <!-- Producto 13 -->
+                <div class="product-card" data-precio="12.50" data-categoria="Cocina" data-marca="T-fal"
+                    data-tamano="Pequeño" data-color="Varios">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Tazas.jpeg" alt="Set de Tazas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 4 Tazas T-fal</h3>
+                        <div class="product-price">$12.50</div>
+                    </div>
+                </div>
+
+                <!-- Producto 14 -->
+                <div class="product-card" data-precio="25" data-categoria="Ropa de hogar" data-marca="Home Collection"
+                    data-tamano="Mediano" data-color="Blanco">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/almohadaMicrofibra.png" alt="Set de Almohadas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 2 Almohadas Microfibra</h3>
+                        <div class="product-price">$25</div>
+                    </div>
+                </div>
+
+                <!-- Producto 15 -->
+                <div class="product-card" data-precio="19.99" data-categoria="Jardín" data-marca="GardenPro"
+                    data-tamano="Grande" data-color="Blanca">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/SillaPlegable.jpg" alt="Silla de Jardín" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Silla de Jardín Plegable</h3>
+                        <div class="product-price">$19.99</div>
+                    </div>
+                </div>
+
+                <!-- Producto 16 -->
+                <div class="product-card" data-precio="39.99" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="Black+Decker" data-tamano="Pequeño" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Plancha.jpg" alt="Plancha Black+Decker" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Plancha de Vapor Black+Decker</h3>
+                        <div class="product-price">$39.99</div>
+                    </div>
+                </div>
+
+                <!-- Producto 17 -->
+                <div class="product-card" data-precio="8" data-categoria="Decoración" data-marca="Home Collection"
+                    data-tamano="Pequeño" data-color="Baige">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Alfombra6090.jpg" alt="Alfombra Decorativa" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Alfombra Decorativa 60x90cm</h3>
+                        <div class="product-price">$8</div>
+                    </div>
+                </div>
+
+                <!-- Producto 18 -->
+                <div class="product-card" data-precio="15" data-categoria="Organización" data-marca="Home Collection"
+                    data-tamano="Pequeño" data-color="Cafe">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/CanastaConTapa.jpg" alt="Canasta Organizadora" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Canasta Organizadora Multiusos con Tapa</h3>
+                        <div class="product-price">$15</div>
+                    </div>
+                </div>
+
+                <!-- Producto 19 -->
+                <div class="product-card" data-precio="19.99" data-categoria="Ropa de hogar"
+                    data-marca="Home Collection" data-tamano="Mediano" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/EdredonMatrimonial.jpg" alt="Edredón Matrimonial" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Edredón Matrimonial Microfibra</h3>
+                        <div class="product-price">$19.99</div>
+                    </div>
+                </div>
+
+                <!-- Producto 20 -->
+                <div class="product-card" data-precio="40" data-categoria="Cocina" data-marca="Tramontina"
+                    data-tamano="Pequeño" data-color="Acero">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/SetCuchillos.jpg" alt="Set de Cuchillos" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 5 Cuchillos</h3>
+                        <div class="product-price">$40</div>
+                    </div>
+                </div>
+
+                <!-- Producto 21 -->
+                <div class="product-card" data-precio="39" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="BlackDecker" data-tamano="Pequeño" data-color="Blanca">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Batidora.jpg" alt="Batidora Oster" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Batidora de Mano Black and Decker 5 Velocidades</h3>
+                        <div class="product-price">$39</div>
+                    </div>
+                </div>
+
+
+                <!-- Producto 22 -->
+                <div class="product-card" data-precio="499" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="Atmosphera" data-tamano="Pequeño" data-color="Rojo">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/cuadroDecoracion.jpg" alt="Cuadro Decorativo" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cuadro Decorativo de Madera</h3>
+                        <div class="product-price">$9.50</div>
+                    </div>
+                </div>
+
+                <!-- Producto 23 -->
+                <div class="product-card" data-precio="9.50" data-categoria="Decoración" data-marca="Atmosphera"
+                    data-tamano="Pequeño" data-color="Varios">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Florero.jpg" alt="Florero Decorativo" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Florero Decorativo de Vidrio</h3>
+                        <div class="product-price">$9.50</div>
+                    </div>
+                </div>
+
+                <!--Producto 24-->
+                <div class="product-card" data-precio="4.50" data-categoria="Cocina" data-marca="Corona"
+                    data-tamano="Pequeño" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/VagillaCorona.jpeg" alt="Vagilla" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Plato Postre - Pieza Suelta</h3>
+                        <div class="product-price">$4.50</div>
+                    </div>
+                </div>
+
+                <!--Producto 25-->
+                <div class="product-card" data-precio="1.75" data-categoria="Baño" data-tamano="Pequeño"
+                    data-color="Blanco">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Trapeador.jpg" alt="Trapeador" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Toalla para Trapeador</h3>
+                        <div class="product-price">$1.75</div>
+                    </div>
+                </div>
+
+                <!--Producto 26-->
+                <div class="product-card" data-precio="17.75" data-categoria="Decoración" data-marca="Geneva"
+                    data-tamano="Pequeño" data-color="Cafe">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/RelojPared.jpg" alt="Reloj" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Reloj para Pared 12 pulgadas</h3>
+                        <div class="product-price">$17.75</div>
+                    </div>
+                </div>
+
+                <!--Producto 27-->
+                <div class="product-card" data-precio="17.75" data-categoria="Decoración" data-marca="Geneva"
+                    data-tamano="Pequeño" data-color="Baige">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Reloj2.jpg" alt="Reloj" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Reloj para Pared 11.5 pulgadas</h3>
+                        <div class="product-price">$17.75</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Paginación -->
+            <div id="pagination" class="pagination">
+                <a href="#" id="prev">Anterior</a>
+
+                <a href="#" id="next">Siguiente</a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- fpooter incluido x medio de ID -->
+    <div id="footer"></div>
+
+    <script src="../Js/animacion.js"></script>
+    <script src="../Js/duplicados.js"></script>
+    <script src="../Js/filtrosHogar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
