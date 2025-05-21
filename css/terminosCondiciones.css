@@ -1,0 +1,72 @@
+body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .terminos-container {
+      max-width: 900px;
+      margin: 80px auto;
+      background-color: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+    }
+
+    .terminos-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    .terminos-container h2 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #333;
+      border-left: 4px solid #000;
+      padding-left: 10px;
+    }
+
+    .terminos-container p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .volver-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 30px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .volver-btn:hover {
+      background-color: #333;
+    }
+
+    .guide-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    @media (max-width: 768px) {
+      .terminos-container {
+        margin: 40px 20px;
+        padding: 25px;
+      }
+
+      .terminos-container h1 {
+        font-size: 2rem;
+      }
+    }
