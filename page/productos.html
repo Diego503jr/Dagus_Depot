@@ -25,48 +25,123 @@
       <h2>Filtros</h2>
 
       <form action="productos.html" method="GET">
-        <div class="filter-section">
-          <h3>Categorías</h3>
-          <ul class="filter-options">
-            <li><label><input type="checkbox" name="categoria" value="Refrigeradores"> Refrigeradores</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Lavadoras"> Lavadoras</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Hornos"> Hornos</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Televisores"> Televisores</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Computadoras"> Computadoras</label></li>
-          </ul>
-        </div>
 
         <div class="filter-section">
           <h3>Precio</h3>
           <div class="price-range">
-            <span>$10,000</span>
-            <span id="price-display">$25,000</span>
+            <span>$1.00</span>
+            <span id="price-display">$5,000</span>
           </div>
-          <input type="range" id="precioMax" min="10000" max="25000" value="20000" style="width: 100%;">
+          <input type="range" id="precioMax" min="1" max="5000" value="5000" style="width: 100%;">
         </div>
 
+        <h3>TV Y VIDEO</h3>
+        <div class="filter-section">
+          <h3>Categorías</h3>
+          <ul class="filter-options">
+            <li><label><input type="checkbox" name="categoria" value="Televisores">Televisores</label></li>
+            <li><label><input type="checkbox" name="categoria" value="Streaming">Streaming</label></li>
+            <li><label><input type="checkbox" name="categoria" value="Proyectores">Proyectores</label></li>
+          </ul>
+        </div>
+       
 
         <div class="filter-section">
           <h3>Marcas</h3>
           <ul class="filter-options">
-            <li><label><input type="checkbox" name="marca" value="Samsung"> Samsung</label></li>
-            <li><label><input type="checkbox" name="marca" value="LG"> LG</label></li>
-            <li><label><input type="checkbox" name="marca" value="Mabe"> Mabe</label></li>
-            <li><label><input type="checkbox" name="marca" value="Sony"> Sony</label></li>
-            <li><label><input type="checkbox" name="marca" value="Whirlpool"> Whirlpool</label></li>
+            <li><label><input type="checkbox" name="marca" value="LG">LG</label></li>
+            <li><label><input type="checkbox" name="marca" value="Sony">Sony</label></li>
+            <li><label><input type="checkbox" name="marca" value="Samsung">Samsung</label></li>
+            <li><label><input type="checkbox" name="marca" value="Hisense">Hisense</label></li>
+            <li><label><input type="checkbox" name="marca" value="Toshiba">Toshiba</label></li>
+
+            <li><label><input type="checkbox" name="marca" value="Apple">Apple</label></li>
+            <li><label><input type="checkbox" name="marca" value="Roku">Roku</label></li>
+            <li><label><input type="checkbox" name="marca" value="Google">Google</label></li>
+            <li><label><input type="checkbox" name="marca" value="Spectra">Spectra</label></li>
+            
           </ul>
         </div>
 
         <div class="filter-section">
-          <h3>Tamaños</h3>
+          <h3>Tamaño de pantalla</h3>
           <ul class="filter-options">
-            <li><label><input type="checkbox" name="tamano" value="Pequeño"> Pequeño</label></li>
-            <li><label><input type="checkbox" name="tamano" value="Mediano"> Mediano</label></li>
-            <li><label><input type="checkbox" name="tamano" value="Grande"> Grande</label></li>
-            <li><label><input type="checkbox" name="tamano" value="Extra Grande"> Extra Grande</label></li>
+            <li><label><input type="checkbox" name="pulgada" value="32">32"</label></li>
+            <li><label><input type="checkbox" name="pulgada" value="43">43"</label></li>
+            <li><label><input type="checkbox" name="pulgada" value="50">50"</label></li>
+            <li><label><input type="checkbox" name="pulgada" value="65">65"</label></li>
+            <li><label><input type="checkbox" name="pulgada" value="75">75"</label></li>
+            <li><label><input type="checkbox" name="pulgada" value="100">100"</label></li>
           </ul>
         </div>
 
+        <div class="filter-section">
+            <h3>Definición de pantalla</h3>
+            <ul class="filter-options">
+              <li><label><input type="checkbox" name="definicion" value="UHD 4K">UHD 4K</label></li>
+              <li><label><input type="checkbox" name="definicion" value="FHD">FHD</label></li>
+              <li><label><input type="checkbox" name="definicion" value="HD">HD</label></li>
+              <li><label><input type="checkbox" name="definicion" value="4K">4K</label></li>
+            </ul>
+        </div>
+        
+
+        <!--HOGAR-->
+        <h3>HOGAR</h3>
+        <div class="filter-section">
+            <h3>Categorías</h3>
+            <ul class="filter-options">
+                <li><label><input type="checkbox" name="categoria" value="Cocina"> Cocina</label></li>
+                <li><label><input type="checkbox" name="categoria" value="Cafe y te"> Café y Té</label></li>
+                <li><label><input type="checkbox" name="categoria" value="Pequeños Electrodomésticos"> Pequeños
+                                Electrodomésticos</label></li>
+                <li><label><input type="checkbox" name="categoria" value="Organización"> Organización</label></li>
+                <li><label><input type="checkbox" name="categoria" value="Decoración"> Decoración</label></li>
+                <li><label><input type="checkbox" name="categoria" value="Baño"> Baño</label></li>
+                <li><label><input type="checkbox" name="categoria" value="Jardín"> Jardín</label></li>
+            </ul>
+        </div>
+        
+        <div class="filter-section">
+            <h3>Marcas</h3>
+            <ul class="filter-options">
+                <li><label><input type="checkbox" name="marca" value="T-fal"> T-fal</label></li>
+                <li><label><input type="checkbox" name="marca" value="Home Collection"> Home Collection</label></li>
+                <li><label><input type="checkbox" name="marca" value="Philips"> Philips</label></li>
+                <li><label><input type="checkbox" name="marca" value="GardenPro"> GardenPro</label></li>
+                <li><label><input type="checkbox" name="marca" value="Indurama"> Indurama</label></li>
+                <li><label><input type="checkbox" name="marca" value="Tramontina"> Tramontina</label></li>
+                <li><label><input type="checkbox" name="marca" value="Black+Decker"> Black+Decker</label></li>
+                <li><label><input type="checkbox" name="marca" value="Atmosphera"> Atmosphera</label></li>
+                <li><label><input type="checkbox" name="marca" value="Corona"> Corona</label></li>
+                <li><label><input type="checkbox" name="marca" value="Geneva"> Geneva</label></li>
+            </ul>
+        </div>
+
+        <div class="filter-section">
+            <h3>Tamaños</h3>
+            <ul class="filter-options">
+                <li><label><input type="checkbox" name="tamano" value="Pequeño"> Pequeño</label></li>
+                <li><label><input type="checkbox" name="tamano" value="Mediano"> Mediano</label></li>
+                <li><label><input type="checkbox" name="tamano" value="Grande"> Grande</label></li>
+                <li><label><input type="checkbox" name="tamano" value="Extra Grande"> Extra Grande</label></li>
+            </ul>
+        </div>
+        <div class="filter-section">
+            <h3>Color</h3>
+            <ul class="filter-options">
+                <li><label><input type="checkbox" name="color" value="Negro"> Negro</label></li>
+                <li><label><input type="checkbox" name="color" value="Gris"> Gris</label></li>
+                <li><label><input type="checkbox" name="color" value="Blanco"> Blanco</label></li>
+                <li><label><input type="checkbox" name="color" value="Verde"> Verde</label></li>
+                <li><label><input type="checkbox" name="color" value="Azul"> Azul</label></li>
+                <li><label><input type="checkbox" name="color" value="Rojo"> Rojo</label></li>
+                <li><label><input type="checkbox" name="color" value="Baige"> Baige</label></li>
+                <li><label><input type="checkbox" name="color" value="Cafe"> Cafe</label></li>
+                <li><label><input type="checkbox" name="color" value="Acero"> Acero</label></li>
+                <li><label><input type="checkbox" name="color" value="Varios"> Varios</label></li>
+            </ul>
+        </div>
       </form>
     </aside>
 
@@ -87,257 +162,665 @@
       
 
       <div class="products-grid" id="products-container">
-        <!-- Producto 1 -->
-        <div class="product-card" data-precio="24999" data-categoria="Refrigeradores" data-marca="Samsung" data-date="2023-05-01" data-popularity="150" data-tamano="Grande">
-          <div class="product-image">
-            <img src="../img/" alt="Refrigerador Side by Side" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Refrigerador Side by Side</h3>
-            <div class="product-price">$24,999</div>
-          </div>
-        </div>
-    
-        <!-- Producto 2 -->
-        <div class="product-card" data-precio="12799" data-categoria="Lavadoras" data-marca="LG" data-tamano="Grande" data-date="2023-06-15" data-popularity="120">
-          <div class="product-image">
-            <img src="../img/" alt="Lavadora Carga Frontal" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Lavadora Carga Frontal</h3>
-            <div class="product-price">
-              <span class="old-price">$15,999</span>
-              <span>$12,799</span>
-              <span class="discount">20%</span>
+            <!--TV Y VIDEO-->
+            <!-- Producto 1 -->
+            <div class="product-card" data-precio="376.96" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="50" data-categoria="Televisores" data-date="2023-03-01" data-popularity="85">
+            <div class="product-image">
+                <img src="../img/tvVideo/Tv-4kHisense50.png" alt="UHD 4K Hisense 50 inch" width="160">
             </div>
-          </div>
-        </div>
-    
-        <!-- Producto 3 -->
-        <div class="product-card" data-precio="3499" data-categoria="Hornos" data-marca="Panasonic" data-tamano="Pequeño" data-date="2023-07-20" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/" alt="Horno de Microondas" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Horno de Microondas</h3>
-            <div class="product-price">$3,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 4 -->
-        <div class="product-card" data-precio="19999" data-categoria="Televisores" data-marca="Sony" data-tamano="Grande" data-date="2023-04-10" data-popularity="180">
-          <div class="product-image">
-            <img src="../img/" alt="TV OLED 55&quot;" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">TV OLED 55"</h3>
-            <div class="product-price">$19,999</div>
-          </div>
-        </div>
-    
-        <!-- Producto 5 -->
-        <div class="product-card" data-precio="17999" data-categoria="Computadoras" data-marca="HP" data-tamano="Mediano" data-date="2023-08-05" data-popularity="110">
-          <div class="product-image">
-            <img src="../img/" alt="Laptop Ultrabook" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Laptop Ultrabook</h3>
-            <div class="product-price">
-              <span class="old-price">$22,499</span>
-              <span>$17,999</span>
-              <span class="discount">20%</span>
+            <div class="product-info">
+                <h3 class="product-name">TV UHD 4K Hisense 50"</h3>
+                <div class="product-price">
+                <span class="old-price">$376.96</span>
+                <span>$301.56</span>
+                <span class="discount">20%</span>
+                </div>
             </div>
-          </div>
-        </div>
-    
-        <!-- Producto 6 -->
-        <div class="product-card" data-precio="8499" data-categoria="Lavadora" data-marca="Mabe" data-tamano="Mediano" data-date="2023-09-12" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/" alt="Lavadora" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Lavadora</h3>
-            <div class="product-price">
-              <span class="old-price">$1,000</span>
-              <span>$500</span>
-              <span class="discount">50%</span>
             </div>
-          </div>
-        </div>
-    
-        <!-- Producto 7 -->
-        <div class="product-card" data-precio="8499" data-categoria="Lavadora" data-marca="Mabe" data-tamano="Mediano" data-date="2023-03-25" data-popularity="70">
-          <div class="product-image">
-            <img src="../img/" alt="Lavadora" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Lavadora</h3>
-            <div class="product-price">$1,000</div>
-          </div>
-        </div>
-    
-        <!-- Producto 8 -->
-        <div class="product-card" data-precio="8499" data-categoria="Celular" data-marca="Mabe" data-tamano="Mediano" data-date="2023-10-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/" alt="Iphone 13" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 9 -->
-        <div class="product-card" data-precio="8499" data-categoria="" data-marca="Mabe" data-tamano="Mediano" data-date="2023-02-18" data-popularity="60">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 10-->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-11-15" data-popularity="130">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 11 -->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-01-10" data-popularity="55">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 12-->
-        <div class="product-card" data-precio="24999" data-categoria="Refrigerador" data-marca="Samsung" data-tamano="Grande" data-date="2023-07-30" data-popularity="140">
-          <div class="product-image">
-            <img src="../img/" alt="Refrigerador Side by Side" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Refrigerador Side by Side</h3>
-            <div class="product-price">$24,999</div>
-          </div>
-        </div>
-    
-        <!-- Producto 13 -->
-        <div class="product-card" data-precio="12799" data-categoria="Lavadora" data-marca="LG" data-tamano="Grande" data-date="2023-05-22" data-popularity="115">
-          <div class="product-image">
-            <img src="../img/" alt="Lavadora Carga Frontal" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Lavadora Carga Frontal</h3>
-            <div class="product-price">
-              <span class="old-price">$15,999</span>
-              <span>$12,799</span>
-              <span class="discount">20%</span>
+        
+            <!-- Producto 2 -->
+            <div class="product-card" data-precio="602.23" data-definicion="UHD" data-marca="Sony" data-pulgada="65" data-categoria="Televisores" data-date="2022-09-01" data-popularity="100">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-UHDSony65.jpg" alt="TV UHD Sony BRAVIA 65 inch" width="160">
             </div>
-          </div>
-        </div>
-    
-        <!-- Producto 14 -->
-        <div class="product-card" data-precio="3499" data-categoria="Electrodoméstico" data-marca="Panasonic" data-tamano="Pequeño" data-date="2023-09-01" data-popularity="100">
-          <div class="product-image">
-            <img src="../img/" alt="Horno de Microondas" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Horno de Microondas</h3>
-            <div class="product-price">$3,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 15-->
-        <div class="product-card" data-precio="19999" data-categoria="Televisión" data-marca="Sony" data-tamano="Grande" data-date="2023-06-10" data-popularity="160">
-          <div class="product-image">
-            <img src="../img/" alt="TV OLED 55&quot;" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">TV OLED 55"</h3>
-            <div class="product-price">$19,999</div>
-          </div>
-        </div>
-    
-        <!-- Producto 16-->
-        <div class="product-card" data-precio="17999" data-categoria="Computadora" data-marca="HP" data-tamano="Mediano" data-date="2023-04-05" data-popularity="125">
-          <div class="product-image">
-            <img src="../img/" alt="Laptop Ultrabook" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Laptop Ultrabook</h3>
-            <div class="product-price">
-              <span class="old-price">$22,499</span>
-              <span>$17,999</span>
-              <span class="discount">20%</span>
+            <div class="product-info">
+                <h3 class="product-name">TV UHD Sony BRAVIA 65"</h3>
+                <div class="product-price">$602.23</div>
             </div>
-          </div>
+            </div>
+        
+            <!-- Producto 3 -->
+            <div class="product-card" data-precio="664.90" data-definicion="UHD 4K" data-marca="Samsung" data-pulgada="65" data-categoria="Televisores" data-date="2023-04-01" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-4KSamsung65.png" alt="TV UHD 4K Samsung 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">TV UHD 4K Samsung 65"</h3>
+                <div class="product-price">$664.90</div>
+            </div>
+            </div>
+        
+            <!-- Producto 4 -->
+            <div class="product-card" data-precio="3,599.00" data-definicion="4K" data-marca="Hisense" data-pulgada="100" data-categoria="Televisores" data-date="2024-09-01" data-popularity="90">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-MiniLedHisense100.png
+                " alt="Tv Hisense Mini LED Smart Tv 100 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv Hisense 4K Mini LED Smart Tv 100"</h3>
+                <div class="product-price">
+                <span class="old-price">$3,599.00</span>
+                <span>$2,879.2</span>
+                <span class="discount">20%</span>
+                </div>
+            </div>
+            </div>
+        
+            <!-- Producto  5-->
+            <div class="product-card" data-precio="899" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="65" data-categoria="Televisores" data-date="2023-07-01" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-MiniLedHisense65.png" alt="Tv UHD 4K Mini LED Hisense 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv UHD 4K Mini LED Hisense 65"</h3>
+                <div class="product-price">$899</div>
+            </div>
+            </div>
+        
+            <!-- producto 6 -->
+            <div class="product-card" data-precio="25.99" data-marca="Google" data-categoria="Streaming" data-date="2018-10-10" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-Chromecast.png" alt="Google Chromecast 3ra generación" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Google Chromecast 3ra generación</h3>
+                <div class="product-price">$25.99</div>
+            </div>
+            </div>
+        
+            <!-- Product0 7 -->
+            <div class="product-card" data-precio="602.23" data-definicion="UHD 4K" data-marca="Sony" data-pulgada="65" data-categoria="Televisores" data-date="2022-09-01" data-popularity="100">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-SmartSony65.jpg" alt="Tv UHD Sony 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv UHD Sony Smart Tv 65"</h3>
+                <div class="product-price">$602.23</div>
+            </div>
+            </div>
+        
+            <!-- Producto 8 -->
+            <div class="product-card" data-precio="3135.34" data-definicion="4K" data-marca="Sony" data-pulgada="65" data-categoria="Televisores" data-date="2022-08-01" data-popularity="105">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-OledSony65.png" alt="Tv 4K Sony BRAVIA OLED XR 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv 4K Sony BRAVIA OLED XR 65"</h3>
+                <div class="product-price">$3,135.34</div>
+            </div>
+            </div>
+        
+            <!-- Producto 9-->
+            <div class="product-card" data-precio="59" data-marca="Roku" data-categoria="Streaming" data-date="2021-09-01" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-RokuStreaming.png" alt="Roku Express 4K+ | Dispositivo de transmisión Roku 4K/HDR" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Roku Express 4K+ | Dispositivo de transmisión Roku 4K/HDR</h3>
+                <div class="product-price">$59.00</div>
+            </div>
+            </div>
+        
+            <!-- Producto 10 -->
+            <div class="product-card" data-precio="829" data-definicion="UHD 4K" data-marca="LG" data-pulgada="75" data-categoria="Televisores" data-date="2021-11-01" data-popularity="100">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-SmartLG70.png" alt="TV UDH 4K LG 75 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">TV UDH 4K LG 75"</h3>
+                <div class="product-price">$829.00</div>
+            </div>
+            </div>
+        
+            <!-- Producto 11 -->
+            <div class="product-card" data-precio="395" data-definicion="FHD" data-marca="Samsung" data-pulgada="43" data-categoria="Televisores" data-date="2023-02-01" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-SmartSamsung43.png" alt="Tv FHD Samsung 43 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv Full HD Samsung Smart Tv 43"</h3>
+                <div class="product-price">
+                <span class="old-price">$395.00</span>
+                <span>$233.10</span>
+                <span class="discount">10%</span>
+                </div>
+            </div>
+            </div>
+        
+            <!-- Producto 12 -->
+            <div class="product-card" data-precio="375" data-definicion="FHD" data-marca="Toshiba" data-pulgada="43" data-categoria="Televisores" data-date="2021-05-01" data-popularity="90">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-SmartToshiba43.png" alt="Tv Full HD Smart Tv Toshiba 43 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv Full HD Smart Tv Toshiba 43"</h3>
+                <div class="product-price">$375</div>
+            </div>
+            </div>
+        
+            <!-- Producto 13-->
+            <div class="product-card" data-precio="179"  data-marca="Apple" data-categoria="Streaming" data-date="2022-11-04" data-popularity="100">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-AppleTv.png" alt="Apple TV 4K Wi-Fi (3ª generación) con Siri Remote y Apple" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Apple TV 4K Wi-Fi (3ª generación) con Siri Remote y Apple</h3>
+                <div class="product-price">$179.00</div>
+            </div>
+            </div>
+        
+            <!-- Producto 14-->
+            <div class="product-card" data-precio="2799.00" data-definicion="4K" data-marca="Samsung" data-pulgada="65" data-categoria="Televisores" data-date="2024-03-01" data-popularity="110">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-OledSamsung65.png" alt="Tv 4K Samsung OLED 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv 4K Samsung OLED 65"</h3>
+                <div class="product-price">
+                <span class="old-price">$2,699.00</span>
+                <span>$2,499.00</span>
+                <span class="discount">7%</span>
+                </div>
+            </div>
+            </div>
+        
+            <!-- Producto 15-->
+            <div class="product-card" data-precio="619" data-definicion="UHD 4K" data-marca="Samsung" data-pulgada="50" data-categoria="Televisores" data-date="2024-03-01" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-CrystalUHDSamsung50.png" alt="Tv Samsung Crystal UHD 4K Smart Tv 50 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv Samsung Crystal UHD 4K Smart Tv 50"</h3>
+                <div class="product-price">$619.00</div>
+            </div>
+            </div>
+        
+            <!-- Producto 16 -->
+            <div class="product-card" data-precio="1899" data-definicion="4K" data-marca="Samsung" data-pulgada="65" data-categoria="Televisores" data-date="2022-04-01" data-popularity="105">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-4KOLEDSamsung65.png" alt="Tv Smart TV OLED 4K Samsung OLED 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv Smart TV OLED 4K Samsung OLED 65"</h3>
+                <div class="product-price">$1,899.00</div>
+            </div>
+            </div>
+        
+            <!-- Producto 17 -->
+            <div class="product-card" data-precio="399" data-marca="Spectra" data-categoria="Proyectores" data-date="2022-04-01" data-popularity="75">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-ProyectorSpectra.png" alt="PROYECTOR SPECTRA ES01" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">PROYECTOR SPECTRA ES01</h3>
+                <div class="product-price">$399</div>
+            </div>
+            </div>
+        
+            <!-- Producto 18-->
+            <div class="product-card" data-precio="699" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="65" data-categoria="Televisores" data-date="2022-06-01" data-popularity="95">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-UHDHisense65.png" alt="Tv UHD 4K Hisense 65 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv UHD 4K Hisense 65"</h3>
+                <div class="product-price">
+                <span class="old-price">$699.00</span>
+                <span>$594.15</span>
+                <span class="discount">15%</span>
+                </div>
+            </div>
+            </div>
+        
+            <!-- Producto 19-->
+            <div class="product-card" data-precio="210" data-definicion="HD" data-marca="LG" data-pulgada="32" data-categoria="Televisores" data-date="2019-01-01" data-popularity="80">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-HDLG32.png" alt="Tv HD LG 32 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv HD LG 32"</h3>
+                <div class="product-price">$210.00</div>
+            </div>
+            </div>
+
+            <!-- Producto 20-->
+            <div class="product-card" data-precio="215.35" data-definicion="HD" data-marca="Samsung" data-pulgada="32" data-categoria="Televisores" data-date="2019-03-01" data-popularity="80">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-HDSamsung32.png" alt="Tv HD Samsung 32 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv HD Samsung 32"</h3>
+                <div class="product-price">$215.35</div>
+            </div>
+            </div>
+
+            <!-- Producto 21-->
+            <div class="product-card" data-precio="459" data-marca="Spectra"  data-categoria="Proyectores" data-date="2024-10-01" data-popularity="85">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-ProyectorSpectraQS01.png" alt="Proyector Spectra QS01" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Proyector Spectra QS01</h3>
+                <div class="product-price">
+                <span class="old-price">$459.00</span>
+                <span>$344.25</span>
+                <span class="discount">25%</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Producto 22-->
+            <div class="product-card" data-precio="2799" data-definicion="UHD 4K" data-marca="Sony" data-pulgada="75" data-categoria="Televisores" data-date="2019-06-01" data-popularity="90">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-4KSony85.png" alt="Tv UHD 4K Sony 75 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv UHD 4K Sony 75"</h3>
+                <div class="product-price">
+                <span class="old-price">$2,799.00</span>
+                <span>$1,819.35</span>
+                <span class="discount">35%</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Producto 23-->
+            <div class="product-card" data-precio="3199" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="100" data-categoria="Televisores" data-date="2023-08-01" data-popularity="90">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-UHDHisense100.png" alt="TV UHD 4K Hisense 100 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">TV UHD 4K Hisense 100"</h3>
+                <div class="product-price">
+                <span class="old-price">$3,199.00</span>
+                <span>$2,719.15</span>
+                <span class="discount">15%</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Producto 24-->
+            <div class="product-card" data-precio="149" data-marca="Spectra" data-categoria="Proyectores" data-date="2023-06-01" data-popularity="80">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-ProyectorSpectraJ03.png" alt="PROYECTOR SPECTRA J03" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">PROYECTOR SPECTRA J03</h3>
+                <div class="product-price">$149.00</div>
+            </div>
+            </div>
+
+            <!-- Producto 25-->
+            <div class="product-card" data-precio="799" data-definicion="UHD 4K" data-marca="Toshiba" data-pulgada="75" data-categoria="Televisores" data-date="2022-10-01" data-popularity="85">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-4KToshiba75.png" alt="Tv UHD 4K Toshiba 75 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv UHD 4K Toshiba 75"</h3>
+                <div class="product-price">$799.00</div>
+            </div>
+            </div>
+
+            <!-- Producto 26-->
+            <div class="product-card" data-precio="200" data-definicion="HD" data-marca="Hisense" data-pulgada="32" data-categoria="Televisores" data-date="2019-01-01" data-popularity="85">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-HDHisense32.png" alt="Tv HD Hisense 32 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv HD Hisense 32"</h3>
+                <div class="product-price">$200.00</div>
+            </div>
+            </div>
+
+            <!-- Producto 27-->
+            <div class="product-card" data-precio="239" data-definicion="FHD" data-marca="Hisense" data-pulgada="43" data-categoria="Televisores" data-date="2020-02-01" data-popularity="90">
+            <div class="product-image">
+                <img src="../img/tvVideo/TV-FHDHisense43.png" alt="Tv Full HD Hisense 43 inch" width="160">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Tv Full HD Hisense 43"</h3>
+                <div class="product-price">$239.00</div>
+            </div>
+            </div>
+
+            <!--HOGAR-->
+            <!-- Producto 1 -->
+                <div class="product-card" data-precio="41.95" data-categoria="Cafe y te" data-color="Negro"
+                    data-tamano="Mediano" data-fecha="2024-03-15">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/TeteraTermica.jpg" alt="Tetera con Vasos Termicos" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tetera con vasos Termicos</h3>
+                        <div class="product-price">$41.95</div>
+                    </div>
+                </div>
+
+            <!-- Producto 2 -->
+                <div class="product-card" data-precio="35.99" data-categoria="Cocina" data-marca="T-fal"
+                    data-color="Negro" data-tamano="Mediano" data-fecha="2024-03-10">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Sarten-T-fal.png" alt="Sartén T-fal" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sartén Antiadherente T-fal 24cm</h3>
+                        <div class="product-price">$35.99</div>
+                    </div>
+                </div>
+            
+            <!-- Producto 3 -->
+                <div class="product-card" data-precio="25" data-categoria="Organización" data-marca="Home Collection"
+                    data-color="Gris" data-tamano="Grande" data-fecha="2024-03-05">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Ropa-Organizador.png" alt="Organizador de Closet" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Organizador de Closet 4 Compartimentos</h3>
+                        <div class="product-price">$25.00</div>
+                    </div>
+                </div>
+
+            <!-- Producto 4 -->
+                <div class="product-card" data-precio="42.90" data-categoria="Decoración" data-marca="Philips"
+                    data-color="Blanco" data-tamano="Pequeño" data-fecha="2024-03-01">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Lamparas-Philips.png" alt="Lámpara de Mesa" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lámpara de Mesa LED Philips</h3>
+                        <div class="product-price">$42.90</div>
+                    </div>
+                </div>
+
+            <!-- Producto 5 -->
+                <div class="product-card" data-precio="16.00" data-categoria="Baño" data-marca="Home Collection"
+                    data-color="Verde" data-tamano="Pequeño" data-fecha="2024-02-28">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Toallas-HomeCollection.jpg" alt="Set de Toallas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 4 Toallas Algodón</h3>
+                        <div class="product-price">$16.00</div>
+                    </div>
+                </div>
+
+            <!-- Producto 6 -->
+                <div class="product-card" data-precio="12.99" data-categoria="Jardín" data-marca="GardenPro"
+                    data-color="Varios" data-tamano="Mediano" data-fecha="2024-02-25">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Macetas.png" alt="Set de Macetas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 3 Macetas Decorativas</h3>
+                        <div class="product-price">$12.99</div>
+                    </div>
+                </div>
+
+            <!-- Producto 7 -->
+                <div class="product-card" data-precio="40" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="Indurama" data-color="Negro" data-tamano="Mediano" data-fecha="2024-02-20">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Cafetera-Indurama.png" alt="Cafetera Indurama" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cafetera Programable 12 Tazas</h3>
+                        <div class="product-price">$40</div>
+                    </div>
+                </div>
+
+            <!-- Producto 8 -->
+                <div class="product-card" data-precio="20" data-categoria="Cocina" data-marca="Tramontina"
+                    data-color="Acero" data-tamano="Pequeño" data-fecha="2024-02-15">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Cubiertos-Tramontina.jpg" alt="Set de Cubiertos" width="160">
+
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de Cubiertos Tramontina 16 piezas</h3>
+                        <div class="product-price">$20</div>
+                    </div>
+                </div>
+
+            <!-- Producto 9 -->
+                <div class="product-card" data-precio="29.99" data-categoria="Organización" data-marca="Home Collection"
+                    data-tamano="Mediano" data-color="Gris" data-fecha="2024-02-10">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Organizador-HomeCollection.png" alt="Organizador de Cajones"
+                            width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Organizador de Cajones 8 Compartimentos</h3>
+                        <div class="product-price">$29.99</div>
+                    </div>
+                </div>
+
+            <!-- Producto 10 -->
+                <div class="product-card" data-precio="35" data-categoria="Decoración" data-marca="Philips"
+                    data-tamano="Pequeño" data-color="Negro" data-fecha="2024-02-05">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Lampara-Pared.jpg" alt="Lámpara de Pared" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lámpara de Pared LED</h3>
+                        <div class="product-price">$35</div>
+                    </div>
+                </div>
+
+            <!-- Producto 11 -->
+                <div class="product-card" data-precio="28.50" data-categoria="Baño" data-marca="Home Collection"
+                    data-tamano="Pequeño" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Set-Baño.jpg" alt="Set de Accesorios de Baño" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de Accesorios de Baño (4 piezas)</h3>
+                        <div class="product-price">$28.50</div>
+                    </div>
+                </div>
+
+            <!-- Producto 12 -->
+                <div class="product-card" data-precio="79.95" data-categoria="Cocina" data-marca="Tramontina"
+                    data-tamano="Mediano" data-color="Gris">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Olla-Tramontina.jpg" alt="Olla Tramontina" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Olla de Acero Inoxidable Tramontina 5L</h3>
+                        <div class="product-price">$79.95</div>
+                    </div>
+                </div>
+
+            <!-- Producto 13 -->
+                <div class="product-card" data-precio="12.50" data-categoria="Cocina" data-marca="T-fal"
+                    data-tamano="Pequeño" data-color="Varios">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Tazas.jpeg" alt="Set de Tazas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 4 Tazas T-fal</h3>
+                        <div class="product-price">$12.50</div>
+                    </div>
+                </div>
+
+            <!-- Producto 14 -->
+                <div class="product-card" data-precio="25" data-categoria="Ropa de hogar" data-marca="Home Collection"
+                    data-tamano="Mediano" data-color="Blanco">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/almohadaMicrofibra.png" alt="Set de Almohadas" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 2 Almohadas Microfibra</h3>
+                        <div class="product-price">$25</div>
+                    </div>
+                </div>
+
+            <!-- Producto 15 -->
+                <div class="product-card" data-precio="19.99" data-categoria="Jardín" data-marca="GardenPro"
+                    data-tamano="Grande" data-color="Blanca">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/SillaPlegable.jpg" alt="Silla de Jardín" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Silla de Jardín Plegable</h3>
+                        <div class="product-price">$19.99</div>
+                    </div>
+                </div>
+
+            <!-- Producto 16 -->
+                <div class="product-card" data-precio="39.99" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="Black+Decker" data-tamano="Pequeño" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Plancha.jpg" alt="Plancha Black+Decker" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Plancha de Vapor Black+Decker</h3>
+                        <div class="product-price">$39.99</div>
+                    </div>
+                </div>
+
+            <!-- Producto 17 -->
+                <div class="product-card" data-precio="8" data-categoria="Decoración" data-marca="Home Collection"
+                    data-tamano="Pequeño" data-color="Baige">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Alfombra6090.jpg" alt="Alfombra Decorativa" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Alfombra Decorativa 60x90cm</h3>
+                        <div class="product-price">$8</div>
+                    </div>
+                </div>
+
+            <!-- Producto 18 -->
+                <div class="product-card" data-precio="15" data-categoria="Organización" data-marca="Home Collection"
+                    data-tamano="Pequeño" data-color="Cafe">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/CanastaConTapa.jpg" alt="Canasta Organizadora" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Canasta Organizadora Multiusos con Tapa</h3>
+                        <div class="product-price">$15</div>
+                    </div>
+                </div>
+
+            <!-- Producto 19 -->
+                <div class="product-card" data-precio="19.99" data-categoria="Ropa de hogar"
+                    data-marca="Home Collection" data-tamano="Mediano" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/EdredonMatrimonial.jpg" alt="Edredón Matrimonial" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Edredón Matrimonial Microfibra</h3>
+                        <div class="product-price">$19.99</div>
+                    </div>
+                </div>
+
+            <!-- Producto 20 -->
+                <div class="product-card" data-precio="40" data-categoria="Cocina" data-marca="Tramontina"
+                    data-tamano="Pequeño" data-color="Acero">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/SetCuchillos.jpg" alt="Set de Cuchillos" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 5 Cuchillos</h3>
+                        <div class="product-price">$40</div>
+                    </div>
+                </div>
+
+            <!-- Producto 21 -->
+                <div class="product-card" data-precio="39" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="BlackDecker" data-tamano="Pequeño" data-color="Blanca">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Batidora.jpg" alt="Batidora Oster" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Batidora de Mano Black and Decker 5 Velocidades</h3>
+                        <div class="product-price">$39</div>
+                    </div>
+                </div>
+
+
+            <!-- Producto 22 -->
+                <div class="product-card" data-precio="499" data-categoria="Pequeños Electrodomésticos"
+                    data-marca="Atmosphera" data-tamano="Pequeño" data-color="Rojo">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/cuadroDecoracion.jpg" alt="Cuadro Decorativo" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cuadro Decorativo de Madera</h3>
+                        <div class="product-price">$9.50</div>
+                    </div>
+                </div>
+
+            <!-- Producto 23 -->
+                <div class="product-card" data-precio="9.50" data-categoria="Decoración" data-marca="Atmosphera"
+                    data-tamano="Pequeño" data-color="Varios">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Florero.jpg" alt="Florero Decorativo" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Florero Decorativo de Vidrio</h3>
+                        <div class="product-price">$9.50</div>
+                    </div>
+                </div>
+
+            <!--Producto 24-->
+                <div class="product-card" data-precio="4.50" data-categoria="Cocina" data-marca="Corona"
+                    data-tamano="Pequeño" data-color="Azul">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/VagillaCorona.jpeg" alt="Vagilla" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Plato Postre - Pieza Suelta</h3>
+                        <div class="product-price">$4.50</div>
+                    </div>
+                </div>
+
+            <!--Producto 25-->
+                <div class="product-card" data-precio="1.75" data-categoria="Baño" data-tamano="Pequeño"
+                    data-color="Blanco">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Trapeador.jpg" alt="Trapeador" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Toalla para Trapeador</h3>
+                        <div class="product-price">$1.75</div>
+                    </div>
+                </div>
+
+                <!--Producto 26-->
+                <div class="product-card" data-precio="17.75" data-categoria="Decoración" data-marca="Geneva"
+                    data-tamano="Pequeño" data-color="Cafe">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/RelojPared.jpg" alt="Reloj" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Reloj para Pared 12 pulgadas</h3>
+                        <div class="product-price">$17.75</div>
+                    </div>
+                </div>
+
+                <!--Producto 27-->
+                <div class="product-card" data-precio="17.75" data-categoria="Decoración" data-marca="Geneva"
+                    data-tamano="Pequeño" data-color="Baige">
+                    <div class="product-image">
+                        <img src="../img/Img_Hogar/Reloj2.jpg" alt="Reloj" width="160">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Reloj para Pared 11.5 pulgadas</h3>
+                        <div class="product-price">$17.75</div>
+                    </div>
+                </div>
         </div>
-    
-        <!-- Producto 17-->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-08-20" data-popularity="105">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 18 -->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-07-05" data-popularity="80">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 19 -->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-03-15" data-popularity="65">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">--</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 20-->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-10-30" data-popularity="145">
-          <div class="product-image">
-            <img src="../img/" alt="Aire Acondicionado" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    
-        <!-- Producto 21-->
-        <div class="product-card" data-precio="8499" data-categoria="Clima" data-marca="Mabe" data-tamano="Mediano" data-date="2023-02-28" data-popularity="50">
-          <div class="product-image">
-            <img src="../img/" alt="---" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Aire Acondicionado</h3>
-            <div class="product-price">$8,499</div>
-          </div>
-        </div>
-    </div>
 
       <!-- Paginación -->
       <div id="pagination" class="pagination">
