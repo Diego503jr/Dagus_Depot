@@ -18,3 +18,13 @@
   display: block;
   margin: 0 auto;
 }
+.product-image img.custom-height-producto {
+  height: 98% !important;
+  width: auto;
+  position: static;
+  transform: none;
+  left: auto;
+  top: auto;
+  display: block;
+  margin: 0 auto;
+}

@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const colores = getCheckedValues('color');  // Obtener colores seleccionados
       const definiciones = getCheckedValues('definicion');
       const pulgadas = getCheckedValues('pulgada');
+      const capacidades = getCheckedValues('capacidad');
 
       priceDisplay.textContent = formatearPrecio(precioMax);
       productosFiltrados = [];
@@ -204,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const color = producto.getAttribute('data-color');  // Obtener el color del producto
         const definicion = producto.getAttribute('data-definicion');
         const pulgada = producto.getAttribute('data-pulgada');
+        const capacidad = producto.getAttribute('data-capacidad');
 
         const cumple =
           precio <= precioMax &&
@@ -212,7 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
           (colores.length === 0 || colores.includes(color)) &&  // Verificar color seleccionado
           (definiciones.length === 0 || definiciones.includes(definicion)) &&
           (pulgadas.length === 0 || pulgadas.includes(pulgada)) &&
-          (tamanos.length === 0 || tamanos.includes(tamano));
+          (tamanos.length === 0 || tamanos.includes(tamano)) && 
+          (capacidades.length === 0 || capacidades.includes(capacidad));
   
         if (cumple) productosFiltrados.push(producto);
       });
