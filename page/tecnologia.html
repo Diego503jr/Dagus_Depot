@@ -1,422 +1,844 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/lineaBlanca.css" />
+    <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/lineaBlanca.css">
-  <link rel="icon" href="../img/flavicon.png" type="image/x-icon">
+    <title>DAGUS | Productos</title>
 
-  <title>DAGUS | Productos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <!-- header incluido x medio de ID -->
+    <div id="header"></div>
 
-<body>
+    <div class="container">
+      <!-- Sidebar de filtros -->
+      <aside class="filters-sidebar">
+        <div class="breadcrumb">Inicio > Tv y Video</div>
 
-  <!-- header incluido x medio de ID -->
-  <div id="header"></div>
+        <h2>Filtros</h2>
 
-  <div class="container">
-    <!-- Sidebar de filtros -->
-    <aside class="filters-sidebar">
-      <div class="breadcrumb">Inicio > Tv y Video</div>
-
-      <h2>Filtros</h2>
-
-      <form action="productos.html" method="GET">
-       
-        <div class="filter-section">
-          <h3>Categorías</h3>
-          <ul class="filter-options">
-            <li><label><input type="checkbox" name="categoria" value="Almacenamiento">Almacenamiento</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Audio">Audio</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Computacion">Computacion</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Camaras">Cámaras</label></li>
-          </ul>
-        </div>
-       
-
-        <div class="filter-section">
-          <h3>Marcas</h3>
-          <ul class="filter-options">
-            <li><label><input type="checkbox" name="marca" value="HP">HP</label></li>
-            <li><label><input type="checkbox" name="marca" value="RadioShack">RadioShack</label></li>
-            <li><label><input type="checkbox" name="marca" value="Samsung">Samsung</label></li>
-            <li><label><input type="checkbox" name="marca" value="LG">LG</label></li>
-            <li><label><input type="checkbox" name="marca" value="Fujifilm">Fujifilm</label></li>
-            <li><label><input type="checkbox" name="marca" value="Apple">Apple</label></li>
-          </ul>
-        </div>
-        
-        <div class="filter-section">
-            <h3>Precio</h3>
-            <div class="price-range">
-              <span>$30</span>
-              <span id="price-display">$4,400</span>
-            </div>
-            <input type="range" id="precioMax" min="30" max="4400" value="4400" style="width: 100%;">
-          </div>
-
-        <div class="filter-section">
-          <h4>Capacidad</h4>
-          <label><input type="checkbox" name="capacidad" value="64 GB"> 64 GB</label><br>
-          <label><input type="checkbox" name="capacidad" value="128 GB"> 128 GB</label><br>
-          <label><input type="checkbox" name="capacidad" value="256 GB"> 256 GB</label>
-        </div>
-
-
-      </form>
-    </aside>
-
-    <!-- Contenido principal -->
-    <main class="main-content">
-      <h1 class="category-title">Tecnología</h1>
-
-      <div class="results-info" id="info-resultados">
-        <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span> |
-        Ordenar por:
-        <select class="sort-options">
-          <option value="popular">Más populares</option>
-          <option value="price-asc">Precio (menor a mayor)</option>
-          <option value="price-desc">Precio (mayor a menor)</option>
-          <option value="newest">Novedades</option>
-      </select>
-      </div>
-      
-
-    <div class="products-grid" id="products-container">
-
-<!-- Producto 1 -->
-        <div class="product-card" data-precio="240" data-comunicacion="Si" data-marca="Apple" data-categoria="Audio" data-date="2021-05-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/airpods.png" alt="AirPods Pro" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">AirPods Pro</h3>
-            <div class="product-price">
-              <span class="old-price">$240</span>
-              <span>$216</span>
-              <span class="discount">10%</span>
+        <form action="productos.html" method="GET">
+          <div class="filter-section">
+            <h3 class="collapsible">Categorías</h3>
+            <div class="collapsible-content">
+              <ul class="filter-options">
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Almacenamiento"
+                    />Almacenamiento</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Audio"
+                    />Audio</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Computacion"
+                    />Computacion</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Camaras"
+                    />Cámaras</label
+                  >
+                </li>
+              </ul>
             </div>
           </div>
+
+          <div class="filter-section">
+            <h3 class="collapsible">Marcas</h3>
+            <div class="collapsible-content">
+              <ul class="filter-options">
+                <li>
+                  <label
+                    ><input type="checkbox" name="marca" value="HP" />HP</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="RadioShack"
+                    />RadioShack</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Samsung"
+                    />Samsung</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input type="checkbox" name="marca" value="LG" />LG</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Fujifilm"
+                    />Fujifilm</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Apple"
+                    />Apple</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3 class="collapsible">Precio</h3>
+            <div class="collapsible-content">
+              <div class="price-range">
+                <span>$30</span>
+                <span id="price-display">$4,400</span>
+              </div>
+              <input
+                type="range"
+                id="precioMax"
+                min="30"
+                max="4400"
+                value="4400"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h4 class="collapsible">Capacidad</h4>
+            <div class="collapsible-content">
+              <label
+                ><input type="checkbox" name="capacidad" value="64 GB" /> 64
+                GB</label
+              ><br />
+              <label
+                ><input type="checkbox" name="capacidad" value="128 GB" /> 128
+                GB</label
+              ><br />
+              <label
+                ><input type="checkbox" name="capacidad" value="256 GB" /> 256
+                GB</label
+              >
+            </div>
+          </div>
+        </form>
+      </aside>
+
+      <!-- Contenido principal -->
+      <main class="main-content">
+        <h1 class="category-title">Tecnología</h1>
+
+        <div class="results-info" id="info-resultados">
+          <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span>
+          | Ordenar por:
+          <select class="sort-options">
+            <option value="popular">Más populares</option>
+            <option value="price-asc">Precio (menor a mayor)</option>
+            <option value="price-desc">Precio (mayor a menor)</option>
+            <option value="newest">Novedades</option>
+          </select>
         </div>
 
-        <!-- Producto 2 -->
-        <div class="product-card" data-precio="35" data-marca="LG" data-categoria="Audio" data-date="2018-05-15" data-popularity="65">
-          <div class="product-image">
-            <img src="../img/tecnologia/AudiRSnoBTT.png" alt="AirPods Pro" width="160">
+        <div class="products-grid" id="products-container">
+          <!-- Producto 1 -->
+          <div
+            class="product-card"
+            data-precio="240"
+            data-comunicacion="Si"
+            data-marca="Apple"
+            data-categoria="Audio"
+            data-date="2021-05-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/airpods.png"
+                alt="AirPods Pro"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">AirPods Pro</h3>
+              <div class="product-price">
+                <span class="old-price">$240</span>
+                <span>$216</span>
+                <span class="discount">10%</span>
+              </div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">Audífonos LG Wired SoundBass</h3>
-            <div class="product-price">$35</div>
-          </div>
-        </div>
 
-        <!-- Producto 3 -->
-        <div class="product-card" data-precio="45" data-comunicacion="Si" data-marca="RadioShack" data-categoria="Audio" data-date="2020-03-11" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tecnologia/audisRadioShack.png" alt="Audífonos Bluetooth RadioShack" width="160">
+          <!-- Producto 2 -->
+          <div
+            class="product-card"
+            data-precio="35"
+            data-marca="LG"
+            data-categoria="Audio"
+            data-date="2018-05-15"
+            data-popularity="65"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/AudiRSnoBTT.png"
+                alt="AirPods Pro"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Audífonos LG Wired SoundBass</h3>
+              <div class="product-price">$35</div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">Audífonos Bluetooth RadioShack</h3>
-            <div class="product-price">$45</div>
-          </div>
-        </div>
 
-        <!-- Producto 4 -->
-        <div class="product-card" data-precio="376.96" data-comunicacion="Si" data-marca="LG" data-categoria="Audio" data-date="2021-05-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/bocinaLGXBOOM.png" alt="Bocina inalámbrica LG XBOOM Go" width="160" class="custom-height">
+          <!-- Producto 3 -->
+          <div
+            class="product-card"
+            data-precio="45"
+            data-comunicacion="Si"
+            data-marca="RadioShack"
+            data-categoria="Audio"
+            data-date="2020-03-11"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/audisRadioShack.png"
+                alt="Audífonos Bluetooth RadioShack"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Audífonos Bluetooth RadioShack</h3>
+              <div class="product-price">$45</div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">Bocina inalámbrica LG XBOOM Go</h3>
-            <div class="product-price">$95</div>
-          </div>
-        </div>
 
-        <!-- Producto 5 -->
-        <div class="product-card" data-precio="85" data-comunicacion="Si" data-marca="Samsung" data-categoria="Audio" data-date="2021-05-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/BocinaSlevelBox.png" alt="Bocina inalámbrica Samsung Level Box Slim" width="160">
+          <!-- Producto 4 -->
+          <div
+            class="product-card"
+            data-precio="376.96"
+            data-comunicacion="Si"
+            data-marca="LG"
+            data-categoria="Audio"
+            data-date="2021-05-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/bocinaLGXBOOM.png"
+                alt="Bocina inalámbrica LG XBOOM Go"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Bocina inalámbrica LG XBOOM Go</h3>
+              <div class="product-price">$95</div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">Bocina inalámbrica Samsung Level Box Slim</h3>
-            <div class="product-price">$85</div>
-          </div>
-        </div>
 
-        <!-- Producto 6 -->
-        <div class="product-card" data-precio="350" data-marca="Fujifilm" data-categoria="Camaras" data-date="2022-05-26" data-popularity="65">
-          <div class="product-image">
-            <img src="../img/tecnologia/fujifilmfinePix.png" alt="Cámara Fujifilm FinePix XP140" width="160">
+          <!-- Producto 5 -->
+          <div
+            class="product-card"
+            data-precio="85"
+            data-comunicacion="Si"
+            data-marca="Samsung"
+            data-categoria="Audio"
+            data-date="2021-05-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/BocinaSlevelBox.png"
+                alt="Bocina inalámbrica Samsung Level Box Slim"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                Bocina inalámbrica Samsung Level Box Slim
+              </h3>
+              <div class="product-price">$85</div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">Cámara Fujifilm FinePix XP140</h3>
-            <div class="product-price">
-              <span class="old-price">$350</span>
-              <span>$315</span>
-              <span class="discount">10%</span>
+
+          <!-- Producto 6 -->
+          <div
+            class="product-card"
+            data-precio="350"
+            data-marca="Fujifilm"
+            data-categoria="Camaras"
+            data-date="2022-05-26"
+            data-popularity="65"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/fujifilmfinePix.png"
+                alt="Cámara Fujifilm FinePix XP140"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cámara Fujifilm FinePix XP140</h3>
+              <div class="product-price">
+                <span class="old-price">$350</span>
+                <span>$315</span>
+                <span class="discount">10%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 7 -->
+          <div
+            class="product-card"
+            data-precio="376.96"
+            data-marca="Fujifilm"
+            data-categoria="Camaras"
+            data-date="2013-11-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/fujifilmMini90.png"
+                alt="Cámara digital instantánea Fujifilm Mini 90"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                Cámara digital instantánea Fujifilm Mini 90
+              </h3>
+              <div class="product-price">$180</div>
+            </div>
+          </div>
+
+          <!-- Producto 8 -->
+          <div
+            class="product-card"
+            data-precio="4000"
+            data-marca="Fujifilm"
+            data-categoria="Camaras"
+            data-date="2020-02-04"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/fujifilmX100V.png"
+                alt="Cámara Fujifilm X100V"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cámara Fujifilm X100V</h3>
+              <div class="product-price">$4000</div>
+            </div>
+          </div>
+
+          <!-- Producto 9 -->
+          <div
+            class="product-card"
+            data-precio="50"
+            data-marca="RadioShack"
+            data-categoria="Audio"
+            data-date="2021-05-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/grabadoraRadioShack.png"
+                alt="Grabadora de voz RadioShack"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Grabadora de voz RadioShack</h3>
+              <div class="product-price">$50</div>
+            </div>
+          </div>
+
+          <!-- Producto 10 -->
+          <div
+            class="product-card"
+            data-precio="4100"
+            data-marca="HP"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="80"
+            data-capacidad="256 GB"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/HPenvy.png"
+                alt="Laptop HP Envy 15"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Laptop HP Envy 15</h3>
+              <div class="product-price">$4100</div>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+          <div
+            class="product-card"
+            data-precio="4300"
+            data-capacidad="256 GB"
+            data-marca="HP"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="75"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/hpProbook.png"
+                alt="Laptop HP ProBook 450"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Laptop HP ProBook 450</h3>
+              <div class="product-price">$4300</div>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+          <div
+            class="product-card"
+            data-precio="4100"
+            data-capacidad="128 GB"
+            data-marca="HP"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="85"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/HpLaptopPc.png"
+                alt="Tablet HP 11-inch Tablet PC"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tablet HP 11-inch Tablet PC</h3>
+              <div class="product-price">$4100</div>
+            </div>
+          </div>
+
+          <!-- Producto 13 -->
+          <div
+            class="product-card"
+            data-precio="95"
+            data-marca="Fujifilm"
+            data-categoria="Camaras"
+            data-date="2021-05-06"
+            data-popularity="65"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/InstaxMini11.png"
+                alt="Cámara Instax Mini 11"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cámara Instax Mini 11</h3>
+              <div class="product-price">$95</div>
+            </div>
+          </div>
+
+          <!-- Producto 14 -->
+          <div
+            class="product-card"
+            data-precio="4200"
+            data-capacidad="256 GB"
+            data-marca="Apple"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/ipad-9gen.png"
+                alt="iPad 9ª Gen Apple"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">iPad 9ª Gen Apple</h3>
+              <div class="product-price">$4200</div>
+            </div>
+          </div>
+
+          <!-- Producto 15 -->
+          <div
+            class="product-card"
+            data-precio="430"
+            data-capacidad="64 GB"
+            data-marca="Apple"
+            data-categoria="Computacion"
+            data-date="2022-01-06"
+            data-popularity="70"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/iphoneSE.png"
+                alt="iPhone SE 2022"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">iPhone SE 2022</h3>
+              <div class="product-price">$430</div>
+            </div>
+          </div>
+
+          <!-- Producto 16 -->
+          <div
+            class="product-card"
+            data-precio="4400"
+            data-capacidad="256 GB"
+            data-marca="LG"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="65"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/Gram14LG.png"
+                alt="	Laptop LG Gram 14"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Laptop LG Gram 14</h3>
+              <div class="product-price">$4400</div>
+            </div>
+          </div>
+
+          <!-- Producto 17 -->
+          <div
+            class="product-card"
+            data-precio="3900"
+            data-capacidad="128 GB"
+            data-marca="LG"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="75"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/laptopLG.png"
+                alt="Laptop LG UltraPC"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Laptop LG UltraPC</h3>
+              <div class="product-price">$3900</div>
+            </div>
+          </div>
+
+          <!-- Producto 18 -->
+          <div
+            class="product-card"
+            data-precio="4000"
+            data-capacidad="256 GB"
+            data-marca="Apple"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="80"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/MacMiniM1.png"
+                alt="Mac Mini Apple M1"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Mac Mini Apple M1</h3>
+              <div class="product-price">
+                <span class="old-price">$4000</span>
+                <span>$3400</span>
+                <span class="discount">15%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 19 -->
+          <div
+            class="product-card"
+            data-precio="60"
+            data-marca="RadioShack"
+            data-categoria="Audio"
+            data-date="2021-05-06"
+            data-popularity="60"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/microfonoRadioShack.png"
+                alt="Micrófono profesional RadioShack"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Micrófono profesional RadioShack</h3>
+              <div class="product-price">$60</div>
+            </div>
+          </div>
+
+          <!-- Producto 20 -->
+          <div
+            class="product-card"
+            data-precio="30"
+            data-capacidad="128 GB"
+            data-marca="Samsung"
+            data-categoria="Almacenamiento"
+            data-date="2021-05-06"
+            data-popularity="70"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/samsungBar.png"
+                alt="Memoria USB Samsung BAR Plus"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Memoria USB Samsung BAR Plus</h3>
+              <div class="product-price">$30</div>
+            </div>
+          </div>
+
+          <!-- Producto 21 -->
+          <div
+            class="product-card"
+            data-precio="230"
+            data-marca="Samsung"
+            data-categoria="Camaras"
+            data-date="2021-05-06"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/samsungST200F.png"
+                alt="	Cámara compacta Samsung ST200F"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cámara compacta Samsung ST200F</h3>
+              <div class="product-price">$230</div>
+            </div>
+          </div>
+
+          <!-- Producto 22 -->
+          <div
+            class="product-card"
+            data-precio="210"
+            data-marca="Samsung"
+            data-categoria="Camaras"
+            data-date="2021-05-06"
+            data-popularity="80"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/samsungWB350F.png"
+                alt="Cámara digital Samsung WB350F"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cámara digital Samsung WB350F</h3>
+              <div class="product-price">$210</div>
+            </div>
+          </div>
+
+          <!-- Producto 23 -->
+          <div
+            class="product-card"
+            data-precio="95"
+            data-marca="HP"
+            data-categoria="Almacenamiento"
+            data-date="2021-05-06"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/ssdHP.png"
+                alt="Disco duro externo HP Portable Drive"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Disco duro externo HP Portable Drive</h3>
+              <div class="product-price">$95</div>
+            </div>
+          </div>
+
+          <!-- Producto 24 -->
+          <div
+            class="product-card"
+            data-precio="120"
+            data-marca="RadioShack"
+            data-categoria="Almacenamiento"
+            data-date="2021-05-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/ssdRadioShack1TB.png"
+                alt="Disco externo RadioShack 1TB"
+                width="160"
+                class="custom-height-producto"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Disco externo RadioShack 1TB</h3>
+              <div class="product-price">$120</div>
+            </div>
+          </div>
+
+          <!-- Producto 25 -->
+          <div
+            class="product-card"
+            data-precio="110"
+            data-marca="Samsung"
+            data-categoria="Almacenamiento"
+            data-date="2021-05-06"
+            data-popularity="85"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/ssdSamsung.png"
+                alt="Disco duro externo Samsung T7"
+                width="160"
+                class="custom-height"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Disco duro externo Samsung T7</h3>
+              <div class="product-price">$110</div>
+            </div>
+          </div>
+
+          <!-- Producto 26 -->
+          <div
+            class="product-card"
+            data-precio="340"
+            data-marca="LG"
+            data-categoria="Computacion"
+            data-date="2021-05-06"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/TabLG.png"
+                alt="Tablet LG Ultra Tab"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tablet LG Ultra Tab</h3>
+              <div class="product-price">$340</div>
+            </div>
+          </div>
+
+          <!-- Producto 27 -->
+          <div
+            class="product-card"
+            data-precio="30"
+            data-capacidad="64 GB"
+            data-marca="HP"
+            data-categoria="Almacenamiento"
+            data-date="2021-05-06"
+            data-popularity="70"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tecnologia/usbHP64GB.png"
+                alt="	Memoria USB HP v222w"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Memoria USB HP v222w</h3>
+              <div class="product-price">$30</div>
             </div>
           </div>
         </div>
 
-        <!-- Producto 7 -->
-        <div class="product-card" data-precio="376.96" data-marca="Fujifilm" data-categoria="Camaras" data-date="2013-11-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/fujifilmMini90.png" alt="Cámara digital instantánea Fujifilm Mini 90" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Cámara digital instantánea Fujifilm Mini 90</h3>
-            <div class="product-price">$180</div>
-          </div>
-        </div>
+        <!-- Paginación -->
+        <div id="pagination" class="pagination">
+          <a href="#" id="prev">Anterior</a>
 
-        <!-- Producto 8 -->
-        <div class="product-card" data-precio="4000" data-marca="Fujifilm" data-categoria="Camaras" data-date="2020-02-04" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tecnologia/fujifilmX100V.png" alt="Cámara Fujifilm X100V" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Cámara Fujifilm X100V</h3>
-            <div class="product-price">$4000</div>
-          </div>
+          <a href="#" id="next">Siguiente</a>
         </div>
-
-        <!-- Producto 9 -->
-        <div class="product-card" data-precio="50" data-marca="RadioShack" data-categoria="Audio" data-date="2021-05-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/grabadoraRadioShack.png" alt="Grabadora de voz RadioShack" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Grabadora de voz RadioShack</h3>
-            <div class="product-price">$50</div>
-          </div>
-        </div>
-
-        <!-- Producto 10 -->
-        <div class="product-card" data-precio="4100" data-marca="HP" data-categoria="Computacion" data-date="2021-05-06" data-popularity="80" data-capacidad="256 GB">
-          <div class="product-image">
-            <img src="../img/tecnologia/HPenvy.png" alt="Laptop HP Envy 15" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Laptop HP Envy 15</h3>
-            <div class="product-price">$4100</div>
-          </div>
-        </div>
-
-        <!-- Producto 11 -->
-        <div class="product-card" data-precio="4300" data-capacidad="256 GB" data-marca="HP" data-categoria="Computacion" data-date="2021-05-06" data-popularity="75">
-          <div class="product-image">
-            <img src="../img/tecnologia/hpProbook.png" alt="Laptop HP ProBook 450" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Laptop HP ProBook 450</h3>
-            <div class="product-price">$4300</div>
-          </div>
-        </div>
-
-        <!-- Producto 12 -->
-        <div class="product-card" data-precio="4100" data-capacidad="128 GB" data-marca="HP" data-categoria="Computacion" data-date="2021-05-06" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/tecnologia/HpLaptopPc.png" alt="Tablet HP 11-inch Tablet PC" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tablet HP 11-inch Tablet PC</h3>
-            <div class="product-price">$4100</div>
-          </div>
-        </div>
-
-        <!-- Producto 13 -->
-        <div class="product-card" data-precio="95" data-marca="Fujifilm" data-categoria="Camaras" data-date="2021-05-06" data-popularity="65">
-          <div class="product-image">
-            <img src="../img/tecnologia/InstaxMini11.png" alt="Cámara Instax Mini 11" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Cámara Instax Mini 11</h3>
-            <div class="product-price">$95</div>
-          </div>
-        </div>
-
-        <!-- Producto 14 -->
-        <div class="product-card" data-precio="4200" data-capacidad="256 GB" data-marca="Apple" data-categoria="Computacion" data-date="2021-05-06" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tecnologia/ipad-9gen.png" alt="iPad 9ª Gen Apple" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">iPad 9ª Gen Apple</h3>
-            <div class="product-price">$4200</div>
-          </div>
-        </div>
-
-        <!-- Producto 15 -->
-        <div class="product-card" data-precio="430" data-capacidad="64 GB" data-marca="Apple" data-categoria="Computacion" data-date="2022-01-06" data-popularity="70">
-          <div class="product-image">
-            <img src="../img/tecnologia/iphoneSE.png" alt="iPhone SE 2022" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">iPhone SE 2022</h3>
-            <div class="product-price">$430</div>
-          </div>
-        </div>
-
-        <!-- Producto 16 -->
-        <div class="product-card" data-precio="4400" data-capacidad="256 GB"  data-marca="LG" data-categoria="Computacion" data-date="2021-05-06" data-popularity="65">
-          <div class="product-image">
-            <img src="../img/tecnologia/Gram14LG.png" alt="	Laptop LG Gram 14" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">	Laptop LG Gram 14</h3>
-            <div class="product-price">$4400</div>
-          </div>
-        </div>
-
-        <!-- Producto 17 -->
-        <div class="product-card" data-precio="3900" data-capacidad="128 GB" data-marca="LG" data-categoria="Computacion" data-date="2021-05-06" data-popularity="75">
-          <div class="product-image">
-            <img src="../img/tecnologia/laptopLG.png" alt="Laptop LG UltraPC" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Laptop LG UltraPC</h3>
-            <div class="product-price">$3900</div>
-          </div>
-        </div>
-
-        <!-- Producto 18 -->
-        <div class="product-card" data-precio="4000" data-capacidad="256 GB" data-marca="Apple" data-categoria="Computacion" data-date="2021-05-06" data-popularity="80">
-          <div class="product-image">
-            <img src="../img/tecnologia/MacMiniM1.png" alt="Mac Mini Apple M1" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Mac Mini Apple M1</h3>
-            <div class="product-price">
-              <span class="old-price">$4000</span>
-              <span>$3400</span>
-              <span class="discount">15%</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Producto 19 -->
-        <div class="product-card" data-precio="60" data-marca="RadioShack" data-categoria="Audio" data-date="2021-05-06" data-popularity="60">
-          <div class="product-image">
-            <img src="../img/tecnologia/microfonoRadioShack.png" alt="Micrófono profesional RadioShack" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Micrófono profesional RadioShack</h3>
-            <div class="product-price">$60</div>
-          </div>
-        </div>
-
-        <!-- Producto 20 -->
-        <div class="product-card" data-precio="30" data-capacidad="128 GB" data-marca="Samsung" data-categoria="Almacenamiento" data-date="2021-05-06" data-popularity="70">
-          <div class="product-image">
-            <img src="../img/tecnologia/samsungBar.png" alt="Memoria USB Samsung BAR Plus" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Memoria USB Samsung BAR Plus</h3>
-            <div class="product-price">$30</div>
-          </div>
-        </div>
-
-        <!-- Producto 21 -->
-        <div class="product-card" data-precio="230" data-marca="Samsung" data-categoria="Camaras" data-date="2021-05-06" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tecnologia/samsungST200F.png" alt="	Cámara compacta Samsung ST200F" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">	Cámara compacta Samsung ST200F</h3>
-            <div class="product-price">$230</div>
-          </div>
-        </div>
-
-        <!-- Producto 22 -->
-        <div class="product-card" data-precio="210" data-marca="Samsung" data-categoria="Camaras" data-date="2021-05-06" data-popularity="80">
-          <div class="product-image">
-            <img src="../img/tecnologia/samsungWB350F.png" alt="Cámara digital Samsung WB350F" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Cámara digital Samsung WB350F</h3>
-            <div class="product-price">$210</div>
-          </div>
-        </div>
-
-        <!-- Producto 23 -->
-        <div class="product-card" data-precio="95" data-marca="HP" data-categoria="Almacenamiento" data-date="2021-05-06" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tecnologia/ssdHP.png" alt="Disco duro externo HP Portable Drive" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Disco duro externo HP Portable Drive</h3>
-            <div class="product-price">$95</div>
-          </div>
-        </div>
-
-        <!-- Producto 24 -->
-        <div class="product-card" data-precio="120" data-marca="RadioShack" data-categoria="Almacenamiento" data-date="2021-05-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/ssdRadioShack1TB.png" alt="Disco externo RadioShack 1TB" width="160" class="custom-height-producto">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Disco externo RadioShack 1TB</h3>
-            <div class="product-price">$120</div>
-          </div>
-        </div>
-
-        <!-- Producto 25 -->
-        <div class="product-card" data-precio="110" data-marca="Samsung" data-categoria="Almacenamiento" data-date="2021-05-06" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/tecnologia/ssdSamsung.png" alt="Disco duro externo Samsung T7" width="160" class="custom-height">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Disco duro externo Samsung T7</h3>
-            <div class="product-price">$110</div>
-          </div>
-        </div>
-
-        <!-- Producto 26 -->
-        <div class="product-card" data-precio="340" data-marca="LG" data-categoria="Computacion" data-date="2021-05-06" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tecnologia/TabLG.png" alt="Tablet LG Ultra Tab" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tablet LG Ultra Tab</h3>
-            <div class="product-price">$340</div>
-          </div>
-        </div>
-
-        <!-- Producto 27 -->
-        <div class="product-card" data-precio="30" data-capacidad="64 GB" data-marca="HP" data-categoria="Almacenamiento" data-date="2021-05-06" data-popularity="70">
-          <div class="product-image">
-            <img src="../img/tecnologia/usbHP64GB.png" alt="	Memoria USB HP v222w" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">	Memoria USB HP v222w</h3>
-            <div class="product-price">$30</div>
-          </div>
-        </div>
-
+      </main>
     </div>
 
-      <!-- Paginación -->
-      <div id="pagination" class="pagination">
-        <a href="#" id="prev">Anterior</a>
+    <!-- fpooter incluido x medio de ID -->
+    <div id="footer"></div>
 
-        <a href="#" id="next">Siguiente</a>
-      </div>
+    <script src="../Js/animacion.js"></script>
+    <script src="../Js/duplicados.js"></script>
+    <script src="../Js/filtrosHogar.js"></script>
 
-    </main>
-  </div>
-
-  <!-- fpooter incluido x medio de ID -->
-  <div id="footer"></div>
-
-  <script src="/Js/animacion.js"></script>
-  <script src="/Js/duplicados.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--LIBRERIA DE SWEET ALERT-->
-
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--LIBRERIA DE SWEET ALERT-->
+  </body>
 </html>

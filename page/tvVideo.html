@@ -1,458 +1,985 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
+    <title>DAGUS | Productos</title>
 
-  <title>DAGUS | Productos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <!-- header incluido x medio de ID -->
+    <div id="header"></div>
 
-<body>
+    <div class="container">
+      <!-- Sidebar de filtros -->
+      <aside class="filters-sidebar">
+        <div class="breadcrumb">Inicio > Tv y Video</div>
 
-  <!-- header incluido x medio de ID -->
-  <div id="header"></div>
+        <h2>Filtros</h2>
 
-  <div class="container">
-    <!-- Sidebar de filtros -->
-    <aside class="filters-sidebar">
-      <div class="breadcrumb">Inicio > Tv y Video</div>
-
-      <h2>Filtros</h2>
-
-      <form action="productos.html" method="GET">
-       
-        <div class="filter-section">
-          <h3>Categorías</h3>
-          <ul class="filter-options">
-            <li><label><input type="checkbox" name="categoria" value="Televisores">Televisores</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Streaming">Streaming</label></li>
-            <li><label><input type="checkbox" name="categoria" value="Proyectores">Proyectores</label></li>
-          </ul>
-        </div>
-       
-
-        <div class="filter-section">
-          <h3>Marcas</h3>
-          <ul class="filter-options">
-            <li><label><input type="checkbox" name="marca" value="LG">LG</label></li>
-            <li><label><input type="checkbox" name="marca" value="Sony">Sony</label></li>
-            <li><label><input type="checkbox" name="marca" value="Samsung">Samsung</label></li>
-            <li><label><input type="checkbox" name="marca" value="Hisense">Hisense</label></li>
-            <li><label><input type="checkbox" name="marca" value="Toshiba">Toshiba</label></li>
-
-            <li><label><input type="checkbox" name="marca" value="Apple">Apple</label></li>
-            <li><label><input type="checkbox" name="marca" value="Roku">Roku</label></li>
-            <li><label><input type="checkbox" name="marca" value="Google">Google</label></li>
-            <li><label><input type="checkbox" name="marca" value="Spectra">Spectra</label></li>
-            
-          </ul>
-        </div>
-        
-        <div class="filter-section">
-            <h3>Precio</h3>
-            <div class="price-range">
-              <span>$25</span>
-              <span id="price-display">$4,500</span>
-            </div>
-            <input type="range" id="precioMax" min="25" max="4500" value="4500" style="width: 100%;">
-          </div>
-  
-
-        <div class="filter-section">
-          <h3>Tamaño de pantalla</h3>
-          <ul class="filter-options">
-            <li><label><input type="checkbox" name="pulgada" value="32">32"</label></li>
-            <li><label><input type="checkbox" name="pulgada" value="43">43"</label></li>
-            <li><label><input type="checkbox" name="pulgada" value="50">50"</label></li>
-            <li><label><input type="checkbox" name="pulgada" value="65">65"</label></li>
-            <li><label><input type="checkbox" name="pulgada" value="75">75"</label></li>
-            <li><label><input type="checkbox" name="pulgada" value="100">100"</label></li>
-          </ul>
-        </div>
-        <div class="filter-section">
-            <h3>Definición de pantalla</h3>
-            <ul class="filter-options">
-              <li><label><input type="checkbox" name="definicion" value="UHD 4K">UHD 4K</label></li>
-              <li><label><input type="checkbox" name="definicion" value="FHD">FHD</label></li>
-              <li><label><input type="checkbox" name="definicion" value="HD">HD</label></li>
-              <li><label><input type="checkbox" name="definicion" value="4K">4K</label></li>
-            </ul>
-        </div>
-
-      </form>
-    </aside>
-
-    <!-- Contenido principal -->
-    <main class="main-content">
-      <h1 class="category-title">Tv y Video</h1>
-
-      <div class="results-info" id="info-resultados">
-        <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span> |
-        Ordenar por:
-        <select class="sort-options">
-          <option value="popular">Más populares</option>
-          <option value="price-asc">Precio (menor a mayor)</option>
-          <option value="price-desc">Precio (mayor a menor)</option>
-          <option value="newest">Novedades</option>
-      </select>
-      </div>
-      
-
-      <div class="products-grid" id="products-container">
-
-        <!-- Producto 1 -->
-        <div class="product-card" data-precio="376.96" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="50" data-categoria="Televisores" data-date="2023-03-01" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/tvVideo/Tv-4kHisense50.png" alt="UHD 4K Hisense 50 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">TV UHD 4K Hisense 50"</h3>
-            <div class="product-price">
-              <span class="old-price">$376.96</span>
-              <span>$301.56</span>
-              <span class="discount">20%</span>
+        <form action="productos.html" method="GET">
+          <div class="filter-section">
+            <h3 class="collapsible">Categorías</h3>
+            <div class="collapsible-content">
+              <ul class="filter-options">
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Televisores"
+                    />Televisores</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Streaming"
+                    />Streaming</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="categoria"
+                      value="Proyectores"
+                    />Proyectores</label
+                  >
+                </li>
+              </ul>
             </div>
           </div>
+
+          <div class="filter-section">
+            <h3 class="collapsible">Marcas</h3>
+            <div class="collapsible-content">
+              <ul class="filter-options">
+                <li>
+                  <label
+                    ><input type="checkbox" name="marca" value="LG" />LG</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Sony"
+                    />Sony</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Samsung"
+                    />Samsung</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Hisense"
+                    />Hisense</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Toshiba"
+                    />Toshiba</label
+                  >
+                </li>
+
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Apple"
+                    />Apple</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Roku"
+                    />Roku</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Google"
+                    />Google</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="marca"
+                      value="Spectra"
+                    />Spectra</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3 class="collapsible">Precio</h3>
+            <div class="collapsible-content">
+              <div class="price-range">
+                <span>$25</span>
+                <span id="price-display">$4,500</span>
+              </div>
+              <input
+                type="range"
+                id="precioMax"
+                min="25"
+                max="4500"
+                value="4500"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h3 class="collapsible">Tamaño de pantalla</h3>
+            <div class="collapsible-content">
+              <ul class="filter-options">
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pulgada"
+                      value="32"
+                    />32"</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pulgada"
+                      value="43"
+                    />43"</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pulgada"
+                      value="50"
+                    />50"</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pulgada"
+                      value="65"
+                    />65"</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pulgada"
+                      value="75"
+                    />75"</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="pulgada"
+                      value="100"
+                    />100"</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="filter-section">
+            <h3 class="collapsible">Definición de pantalla</h3>
+            <div class="collapsible-content">
+              <ul class="filter-options">
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="definicion"
+                      value="UHD 4K"
+                    />UHD 4K</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="definicion"
+                      value="FHD"
+                    />FHD</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="definicion"
+                      value="HD"
+                    />HD</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="definicion"
+                      value="4K"
+                    />4K</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </aside>
+
+      <!-- Contenido principal -->
+      <main class="main-content">
+        <h1 class="category-title">Tv y Video</h1>
+
+        <div class="results-info" id="info-resultados">
+          <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span>
+          | Ordenar por:
+          <select class="sort-options">
+            <option value="popular">Más populares</option>
+            <option value="price-asc">Precio (menor a mayor)</option>
+            <option value="price-desc">Precio (mayor a menor)</option>
+            <option value="newest">Novedades</option>
+          </select>
         </div>
-    
-        <!-- Producto 2 -->
-        <div class="product-card" data-precio="602.23" data-definicion="UHD" data-marca="Sony" data-pulgada="65" data-categoria="Televisores" data-date="2022-09-01" data-popularity="100">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-UHDSony65.jpg" alt="TV UHD Sony BRAVIA 65 inch" width="160">
+
+        <div class="products-grid" id="products-container">
+          <!-- Producto 1 -->
+          <div
+            class="product-card"
+            data-precio="376.96"
+            data-definicion="UHD 4K"
+            data-marca="Hisense"
+            data-pulgada="50"
+            data-categoria="Televisores"
+            data-date="2023-03-01"
+            data-popularity="85"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/Tv-4kHisense50.png"
+                alt="UHD 4K Hisense 50 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">TV UHD 4K Hisense 50"</h3>
+              <div class="product-price">
+                <span class="old-price">$376.96</span>
+                <span>$301.56</span>
+                <span class="discount">20%</span>
+              </div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">TV UHD Sony BRAVIA 65"</h3>
-            <div class="product-price">$602.23</div>
+
+          <!-- Producto 2 -->
+          <div
+            class="product-card"
+            data-precio="602.23"
+            data-definicion="UHD"
+            data-marca="Sony"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2022-09-01"
+            data-popularity="100"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-UHDSony65.jpg"
+                alt="TV UHD Sony BRAVIA 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">TV UHD Sony BRAVIA 65"</h3>
+              <div class="product-price">$602.23</div>
+            </div>
           </div>
-        </div>
-    
-        <!-- Producto 3 -->
-        <div class="product-card" data-precio="664.90" data-definicion="UHD 4K" data-marca="Samsung" data-pulgada="65" data-categoria="Televisores" data-date="2023-04-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-4KSamsung65.png" alt="TV UHD 4K Samsung 65 inch" width="160">
+
+          <!-- Producto 3 -->
+          <div
+            class="product-card"
+            data-precio="664.90"
+            data-definicion="UHD 4K"
+            data-marca="Samsung"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2023-04-01"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-4KSamsung65.png"
+                alt="TV UHD 4K Samsung 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">TV UHD 4K Samsung 65"</h3>
+              <div class="product-price">$664.90</div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">TV UHD 4K Samsung 65"</h3>
-            <div class="product-price">$664.90</div>
+
+          <!-- Producto 4 -->
+          <div
+            class="product-card"
+            data-precio="3,599.00"
+            data-definicion="4K"
+            data-marca="Hisense"
+            data-pulgada="100"
+            data-categoria="Televisores"
+            data-date="2024-09-01"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-MiniLedHisense100.png
+            "
+                alt="Tv Hisense Mini LED Smart Tv 100 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv Hisense 4K Mini LED Smart Tv 100"</h3>
+              <div class="product-price">
+                <span class="old-price">$3,599.00</span>
+                <span>$2,879.2</span>
+                <span class="discount">20%</span>
+              </div>
+            </div>
           </div>
-        </div>
-    
-        <!-- Producto 4 -->
-        <div class="product-card" data-precio="3,599.00" data-definicion="4K" data-marca="Hisense" data-pulgada="100" data-categoria="Televisores" data-date="2024-09-01" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-MiniLedHisense100.png
-            " alt="Tv Hisense Mini LED Smart Tv 100 inch" width="160">
+
+          <!-- Producto  5-->
+          <div
+            class="product-card"
+            data-precio="899"
+            data-definicion="UHD 4K"
+            data-marca="Hisense"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2023-07-01"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-MiniLedHisense65.png"
+                alt="Tv UHD 4K Mini LED Hisense 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv UHD 4K Mini LED Hisense 65"</h3>
+              <div class="product-price">$899</div>
+            </div>
           </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv Hisense 4K Mini LED Smart Tv 100"</h3>
-            <div class="product-price">
-              <span class="old-price">$3,599.00</span>
-              <span>$2,879.2</span>
-              <span class="discount">20%</span>
+
+          <!-- producto 6 -->
+          <div
+            class="product-card"
+            data-precio="25.99"
+            data-marca="Google"
+            data-categoria="Streaming"
+            data-date="2018-10-10"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-Chromecast.png"
+                alt="Google Chromecast 3ra generación"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Google Chromecast 3ra generación</h3>
+              <div class="product-price">$25.99</div>
+            </div>
+          </div>
+
+          <!-- Product0 7 -->
+          <div
+            class="product-card"
+            data-precio="602.23"
+            data-definicion="UHD 4K"
+            data-marca="Sony"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2022-09-01"
+            data-popularity="100"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-SmartSony65.jpg"
+                alt="Tv UHD Sony 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv UHD Sony Smart Tv 65"</h3>
+              <div class="product-price">$602.23</div>
+            </div>
+          </div>
+
+          <!-- Producto 8 -->
+          <div
+            class="product-card"
+            data-precio="3135.34"
+            data-definicion="4K"
+            data-marca="Sony"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2022-08-01"
+            data-popularity="105"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-OledSony65.png"
+                alt="Tv 4K Sony BRAVIA OLED XR 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv 4K Sony BRAVIA OLED XR 65"</h3>
+              <div class="product-price">$3,135.34</div>
+            </div>
+          </div>
+
+          <!-- Producto 9-->
+          <div
+            class="product-card"
+            data-precio="59"
+            data-marca="Roku"
+            data-categoria="Streaming"
+            data-date="2021-09-01"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-RokuStreaming.png"
+                alt="Roku Express 4K+ | Dispositivo de transmisión Roku 4K/HDR"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                Roku Express 4K+ | Dispositivo de transmisión Roku 4K/HDR
+              </h3>
+              <div class="product-price">$59.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 10 -->
+          <div
+            class="product-card"
+            data-precio="829"
+            data-definicion="UHD 4K"
+            data-marca="LG"
+            data-pulgada="75"
+            data-categoria="Televisores"
+            data-date="2021-11-01"
+            data-popularity="100"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-SmartLG70.png"
+                alt="TV UDH 4K LG 75 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">TV UDH 4K LG 75"</h3>
+              <div class="product-price">$829.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+          <div
+            class="product-card"
+            data-precio="395"
+            data-definicion="FHD"
+            data-marca="Samsung"
+            data-pulgada="43"
+            data-categoria="Televisores"
+            data-date="2023-02-01"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-SmartSamsung43.png"
+                alt="Tv FHD Samsung 43 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv Full HD Samsung Smart Tv 43"</h3>
+              <div class="product-price">
+                <span class="old-price">$395.00</span>
+                <span>$233.10</span>
+                <span class="discount">10%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+          <div
+            class="product-card"
+            data-precio="375"
+            data-definicion="FHD"
+            data-marca="Toshiba"
+            data-pulgada="43"
+            data-categoria="Televisores"
+            data-date="2021-05-01"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-SmartToshiba43.png"
+                alt="Tv Full HD Smart Tv Toshiba 43 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv Full HD Smart Tv Toshiba 43"</h3>
+              <div class="product-price">$375</div>
+            </div>
+          </div>
+
+          <!-- Producto 13-->
+          <div
+            class="product-card"
+            data-precio="179"
+            data-marca="Apple"
+            data-categoria="Streaming"
+            data-date="2022-11-04"
+            data-popularity="100"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-AppleTv.png"
+                alt="Apple TV 4K Wi-Fi (3ª generación) con Siri Remote y Apple"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                Apple TV 4K Wi-Fi (3ª generación) con Siri Remote y Apple
+              </h3>
+              <div class="product-price">$179.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 14-->
+          <div
+            class="product-card"
+            data-precio="2799.00"
+            data-definicion="4K"
+            data-marca="Samsung"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2024-03-01"
+            data-popularity="110"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-OledSamsung65.png"
+                alt="Tv 4K Samsung OLED 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv 4K Samsung OLED 65"</h3>
+              <div class="product-price">
+                <span class="old-price">$2,699.00</span>
+                <span>$2,499.00</span>
+                <span class="discount">7%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 15-->
+          <div
+            class="product-card"
+            data-precio="619"
+            data-definicion="UHD 4K"
+            data-marca="Samsung"
+            data-pulgada="50"
+            data-categoria="Televisores"
+            data-date="2024-03-01"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-CrystalUHDSamsung50.png"
+                alt="Tv Samsung Crystal UHD 4K Smart Tv 50 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">
+                Tv Samsung Crystal UHD 4K Smart Tv 50"
+              </h3>
+              <div class="product-price">$619.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 16 -->
+          <div
+            class="product-card"
+            data-precio="1899"
+            data-definicion="4K"
+            data-marca="Samsung"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2022-04-01"
+            data-popularity="105"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-4KOLEDSamsung65.png"
+                alt="Tv Smart TV OLED 4K Samsung OLED 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv Smart TV OLED 4K Samsung OLED 65"</h3>
+              <div class="product-price">$1,899.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 17 -->
+          <div
+            class="product-card"
+            data-precio="399"
+            data-marca="Spectra"
+            data-categoria="Proyectores"
+            data-date="2022-04-01"
+            data-popularity="75"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-ProyectorSpectra.png"
+                alt="PROYECTOR SPECTRA ES01"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">PROYECTOR SPECTRA ES01</h3>
+              <div class="product-price">$399</div>
+            </div>
+          </div>
+
+          <!-- Producto 18-->
+          <div
+            class="product-card"
+            data-precio="699"
+            data-definicion="UHD 4K"
+            data-marca="Hisense"
+            data-pulgada="65"
+            data-categoria="Televisores"
+            data-date="2022-06-01"
+            data-popularity="95"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-UHDHisense65.png"
+                alt="Tv UHD 4K Hisense 65 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv UHD 4K Hisense 65"</h3>
+              <div class="product-price">
+                <span class="old-price">$699.00</span>
+                <span>$594.15</span>
+                <span class="discount">15%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 19-->
+          <div
+            class="product-card"
+            data-precio="210"
+            data-definicion="HD"
+            data-marca="LG"
+            data-pulgada="32"
+            data-categoria="Televisores"
+            data-date="2019-01-01"
+            data-popularity="80"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-HDLG32.png"
+                alt="Tv HD LG 32 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv HD LG 32"</h3>
+              <div class="product-price">$210.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 20-->
+          <div
+            class="product-card"
+            data-precio="215.35"
+            data-definicion="HD"
+            data-marca="Samsung"
+            data-pulgada="32"
+            data-categoria="Televisores"
+            data-date="2019-03-01"
+            data-popularity="80"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-HDSamsung32.png"
+                alt="Tv HD Samsung 32 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv HD Samsung 32"</h3>
+              <div class="product-price">$215.35</div>
+            </div>
+          </div>
+
+          <!-- Producto 21-->
+          <div
+            class="product-card"
+            data-precio="459"
+            data-marca="Spectra"
+            data-categoria="Proyectores"
+            data-date="2024-10-01"
+            data-popularity="85"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-ProyectorSpectraQS01.png"
+                alt="Proyector Spectra QS01"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Proyector Spectra QS01</h3>
+              <div class="product-price">
+                <span class="old-price">$459.00</span>
+                <span>$344.25</span>
+                <span class="discount">25%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 22-->
+          <div
+            class="product-card"
+            data-precio="2799"
+            data-definicion="UHD 4K"
+            data-marca="Sony"
+            data-pulgada="75"
+            data-categoria="Televisores"
+            data-date="2019-06-01"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-4KSony85.png"
+                alt="Tv UHD 4K Sony 75 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv UHD 4K Sony 75"</h3>
+              <div class="product-price">
+                <span class="old-price">$2,799.00</span>
+                <span>$1,819.35</span>
+                <span class="discount">35%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 23-->
+          <div
+            class="product-card"
+            data-precio="3199"
+            data-definicion="UHD 4K"
+            data-marca="Hisense"
+            data-pulgada="100"
+            data-categoria="Televisores"
+            data-date="2023-08-01"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-UHDHisense100.png"
+                alt="TV UHD 4K Hisense 100 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">TV UHD 4K Hisense 100"</h3>
+              <div class="product-price">
+                <span class="old-price">$3,199.00</span>
+                <span>$2,719.15</span>
+                <span class="discount">15%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 24-->
+          <div
+            class="product-card"
+            data-precio="149"
+            data-marca="Spectra"
+            data-categoria="Proyectores"
+            data-date="2023-06-01"
+            data-popularity="80"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-ProyectorSpectraJ03.png"
+                alt="PROYECTOR SPECTRA J03"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">PROYECTOR SPECTRA J03</h3>
+              <div class="product-price">$149.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 25-->
+          <div
+            class="product-card"
+            data-precio="799"
+            data-definicion="UHD 4K"
+            data-marca="Toshiba"
+            data-pulgada="75"
+            data-categoria="Televisores"
+            data-date="2022-10-01"
+            data-popularity="85"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-4KToshiba75.png"
+                alt="Tv UHD 4K Toshiba 75 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv UHD 4K Toshiba 75"</h3>
+              <div class="product-price">$799.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 26-->
+          <div
+            class="product-card"
+            data-precio="200"
+            data-definicion="HD"
+            data-marca="Hisense"
+            data-pulgada="32"
+            data-categoria="Televisores"
+            data-date="2019-01-01"
+            data-popularity="85"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-HDHisense32.png"
+                alt="Tv HD Hisense 32 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv HD Hisense 32"</h3>
+              <div class="product-price">$200.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 27-->
+          <div
+            class="product-card"
+            data-precio="239"
+            data-definicion="FHD"
+            data-marca="Hisense"
+            data-pulgada="43"
+            data-categoria="Televisores"
+            data-date="2020-02-01"
+            data-popularity="90"
+          >
+            <div class="product-image">
+              <img
+                src="../img/tvVideo/TV-FHDHisense43.png"
+                alt="Tv Full HD Hisense 43 inch"
+                width="160"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Tv Full HD Hisense 43"</h3>
+              <div class="product-price">$239.00</div>
             </div>
           </div>
         </div>
-    
-        <!-- Producto  5-->
-        <div class="product-card" data-precio="899" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="65" data-categoria="Televisores" data-date="2023-07-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-MiniLedHisense65.png" alt="Tv UHD 4K Mini LED Hisense 65 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv UHD 4K Mini LED Hisense 65"</h3>
-            <div class="product-price">$899</div>
-          </div>
-        </div>
-    
-        <!-- producto 6 -->
-        <div class="product-card" data-precio="25.99" data-marca="Google" data-categoria="Streaming" data-date="2018-10-10" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-Chromecast.png" alt="Google Chromecast 3ra generación" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Google Chromecast 3ra generación</h3>
-            <div class="product-price">$25.99</div>
-          </div>
-        </div>
-    
-        <!-- Product0 7 -->
-        <div class="product-card" data-precio="602.23" data-definicion="UHD 4K" data-marca="Sony" data-pulgada="65" data-categoria="Televisores" data-date="2022-09-01" data-popularity="100">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-SmartSony65.jpg" alt="Tv UHD Sony 65 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv UHD Sony Smart Tv 65"</h3>
-            <div class="product-price">$602.23</div>
-          </div>
-        </div>
-    
-        <!-- Producto 8 -->
-        <div class="product-card" data-precio="3135.34" data-definicion="4K" data-marca="Sony" data-pulgada="65" data-categoria="Televisores" data-date="2022-08-01" data-popularity="105">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-OledSony65.png" alt="Tv 4K Sony BRAVIA OLED XR 65 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv 4K Sony BRAVIA OLED XR 65"</h3>
-            <div class="product-price">$3,135.34</div>
-          </div>
-        </div>
-    
-        <!-- Producto 9-->
-        <div class="product-card" data-precio="59" data-marca="Roku" data-categoria="Streaming" data-date="2021-09-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-RokuStreaming.png" alt="Roku Express 4K+ | Dispositivo de transmisión Roku 4K/HDR" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Roku Express 4K+ | Dispositivo de transmisión Roku 4K/HDR</h3>
-            <div class="product-price">$59.00</div>
-          </div>
-        </div>
-    
-        <!-- Producto 10 -->
-        <div class="product-card" data-precio="829" data-definicion="UHD 4K" data-marca="LG" data-pulgada="75" data-categoria="Televisores" data-date="2021-11-01" data-popularity="100">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-SmartLG70.png" alt="TV UDH 4K LG 75 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">TV UDH 4K LG 75"</h3>
-            <div class="product-price">$829.00</div>
-          </div>
-        </div>
-    
-        <!-- Producto 11 -->
-        <div class="product-card" data-precio="395" data-definicion="FHD" data-marca="Samsung" data-pulgada="43" data-categoria="Televisores" data-date="2023-02-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-SmartSamsung43.png" alt="Tv FHD Samsung 43 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv Full HD Samsung Smart Tv 43"</h3>
-            <div class="product-price">
-              <span class="old-price">$395.00</span>
-              <span>$233.10</span>
-              <span class="discount">10%</span>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Producto 12 -->
-        <div class="product-card" data-precio="375" data-definicion="FHD" data-marca="Toshiba" data-pulgada="43" data-categoria="Televisores" data-date="2021-05-01" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-SmartToshiba43.png" alt="Tv Full HD Smart Tv Toshiba 43 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv Full HD Smart Tv Toshiba 43"</h3>
-            <div class="product-price">$375</div>
-          </div>
-        </div>
-    
-        <!-- Producto 13-->
-        <div class="product-card" data-precio="179"  data-marca="Apple" data-categoria="Streaming" data-date="2022-11-04" data-popularity="100">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-AppleTv.png" alt="Apple TV 4K Wi-Fi (3ª generación) con Siri Remote y Apple" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Apple TV 4K Wi-Fi (3ª generación) con Siri Remote y Apple</h3>
-            <div class="product-price">$179.00</div>
-          </div>
-        </div>
-    
-        <!-- Producto 14-->
-        <div class="product-card" data-precio="2799.00" data-definicion="4K" data-marca="Samsung" data-pulgada="65" data-categoria="Televisores" data-date="2024-03-01" data-popularity="110">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-OledSamsung65.png" alt="Tv 4K Samsung OLED 65 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv 4K Samsung OLED 65"</h3>
-            <div class="product-price">
-              <span class="old-price">$2,699.00</span>
-              <span>$2,499.00</span>
-              <span class="discount">7%</span>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Producto 15-->
-        <div class="product-card" data-precio="619" data-definicion="UHD 4K" data-marca="Samsung" data-pulgada="50" data-categoria="Televisores" data-date="2024-03-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-CrystalUHDSamsung50.png" alt="Tv Samsung Crystal UHD 4K Smart Tv 50 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv Samsung Crystal UHD 4K Smart Tv 50"</h3>
-            <div class="product-price">$619.00</div>
-          </div>
-        </div>
-    
-        <!-- Producto 16 -->
-        <div class="product-card" data-precio="1899" data-definicion="4K" data-marca="Samsung" data-pulgada="65" data-categoria="Televisores" data-date="2022-04-01" data-popularity="105">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-4KOLEDSamsung65.png" alt="Tv Smart TV OLED 4K Samsung OLED 65 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv Smart TV OLED 4K Samsung OLED 65"</h3>
-            <div class="product-price">$1,899.00</div>
-          </div>
-        </div>
-    
-        <!-- Producto 17 -->
-        <div class="product-card" data-precio="399" data-marca="Spectra" data-categoria="Proyectores" data-date="2022-04-01" data-popularity="75">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-ProyectorSpectra.png" alt="PROYECTOR SPECTRA ES01" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">PROYECTOR SPECTRA ES01</h3>
-            <div class="product-price">$399</div>
-          </div>
-        </div>
-    
-        <!-- Producto 18-->
-        <div class="product-card" data-precio="699" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="65" data-categoria="Televisores" data-date="2022-06-01" data-popularity="95">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-UHDHisense65.png" alt="Tv UHD 4K Hisense 65 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv UHD 4K Hisense 65"</h3>
-            <div class="product-price">
-              <span class="old-price">$699.00</span>
-              <span>$594.15</span>
-              <span class="discount">15%</span>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Producto 19-->
-        <div class="product-card" data-precio="210" data-definicion="HD" data-marca="LG" data-pulgada="32" data-categoria="Televisores" data-date="2019-01-01" data-popularity="80">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-HDLG32.png" alt="Tv HD LG 32 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv HD LG 32"</h3>
-            <div class="product-price">$210.00</div>
-          </div>
-        </div>
 
-        <!-- Producto 20-->
-        <div class="product-card" data-precio="215.35" data-definicion="HD" data-marca="Samsung" data-pulgada="32" data-categoria="Televisores" data-date="2019-03-01" data-popularity="80">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-HDSamsung32.png" alt="Tv HD Samsung 32 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv HD Samsung 32"</h3>
-            <div class="product-price">$215.35</div>
-          </div>
-        </div>
+        <!-- Paginación -->
+        <div id="pagination" class="pagination">
+          <a href="#" id="prev">Anterior</a>
 
-        <!-- Producto 21-->
-        <div class="product-card" data-precio="459" data-marca="Spectra"  data-categoria="Proyectores" data-date="2024-10-01" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-ProyectorSpectraQS01.png" alt="Proyector Spectra QS01" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Proyector Spectra QS01</h3>
-            <div class="product-price">
-              <span class="old-price">$459.00</span>
-              <span>$344.25</span>
-              <span class="discount">25%</span>
-            </div>
-          </div>
+          <a href="#" id="next">Siguiente</a>
         </div>
-
-        <!-- Producto 22-->
-        <div class="product-card" data-precio="2799" data-definicion="UHD 4K" data-marca="Sony" data-pulgada="75" data-categoria="Televisores" data-date="2019-06-01" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-4KSony85.png" alt="Tv UHD 4K Sony 75 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv UHD 4K Sony 75"</h3>
-            <div class="product-price">
-              <span class="old-price">$2,799.00</span>
-              <span>$1,819.35</span>
-              <span class="discount">35%</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Producto 23-->
-        <div class="product-card" data-precio="3199" data-definicion="UHD 4K" data-marca="Hisense" data-pulgada="100" data-categoria="Televisores" data-date="2023-08-01" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-UHDHisense100.png" alt="TV UHD 4K Hisense 100 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">TV UHD 4K Hisense 100"</h3>
-            <div class="product-price">
-              <span class="old-price">$3,199.00</span>
-              <span>$2,719.15</span>
-              <span class="discount">15%</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Producto 24-->
-        <div class="product-card" data-precio="149" data-marca="Spectra" data-categoria="Proyectores" data-date="2023-06-01" data-popularity="80">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-ProyectorSpectraJ03.png" alt="PROYECTOR SPECTRA J03" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">PROYECTOR SPECTRA J03</h3>
-            <div class="product-price">$149.00</div>
-          </div>
-        </div>
-
-        <!-- Producto 25-->
-        <div class="product-card" data-precio="799" data-definicion="UHD 4K" data-marca="Toshiba" data-pulgada="75" data-categoria="Televisores" data-date="2022-10-01" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-4KToshiba75.png" alt="Tv UHD 4K Toshiba 75 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv UHD 4K Toshiba 75"</h3>
-            <div class="product-price">$799.00</div>
-          </div>
-        </div>
-
-        <!-- Producto 26-->
-        <div class="product-card" data-precio="200" data-definicion="HD" data-marca="Hisense" data-pulgada="32" data-categoria="Televisores" data-date="2019-01-01" data-popularity="85">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-HDHisense32.png" alt="Tv HD Hisense 32 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv HD Hisense 32"</h3>
-            <div class="product-price">$200.00</div>
-          </div>
-        </div>
-
-        <!-- Producto 27-->
-        <div class="product-card" data-precio="239" data-definicion="FHD" data-marca="Hisense" data-pulgada="43" data-categoria="Televisores" data-date="2020-02-01" data-popularity="90">
-          <div class="product-image">
-            <img src="../img/tvVideo/TV-FHDHisense43.png" alt="Tv Full HD Hisense 43 inch" width="160">
-          </div>
-          <div class="product-info">
-            <h3 class="product-name">Tv Full HD Hisense 43"</h3>
-            <div class="product-price">$239.00</div>
-          </div>
-        </div>
+      </main>
     </div>
 
-      <!-- Paginación -->
-      <div id="pagination" class="pagination">
-        <a href="#" id="prev">Anterior</a>
+    <!-- fpooter incluido x medio de ID -->
+    <div id="footer"></div>
 
-        <a href="#" id="next">Siguiente</a>
-      </div>
-
-    </main>
-  </div>
-
-  <!-- fpooter incluido x medio de ID -->
-  <div id="footer"></div>
-
-  <script src="/Js/animacion.js"></script>
-  <script src="/Js/duplicados.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--LIBRERIA DE SWEET ALERT-->
-
-</body>
-
+    <script src="../Js/animacion.js"></script>
+    <script src="../Js/duplicados.js"></script>
+    <script src="../Js/filtrosHogar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--LIBRERIA DE SWEET ALERT-->
+  </body>
 </html>
