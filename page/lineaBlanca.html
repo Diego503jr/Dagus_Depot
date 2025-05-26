@@ -1,0 +1,461 @@
+  <!DOCTYPE html>
+  <html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/movil/header.css">
+    <link rel="stylesheet" href="/css/lineaBlanca.css">
+    <link rel="icon" href="../img/flavicon.png" type="image/x-icon">
+
+    <title>DAGUS | Productos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- header incluido x medio de ID -->
+    <div id="header"></div>
+      <div class="overlay"></div>
+
+
+    <div class="container">
+      <!-- Sidebar de filtros -->
+      <aside class="filters-sidebar">
+        <div class="breadcrumb">Inicio > Línea Blanca</div>
+
+        <h2>Filtros</h2>
+       
+
+        <form action="productos.html" method="GET">
+          <br>
+         <div class="filter-section" id="filter-precio">
+              <h3>Precio</h3>
+              <div class="price-range">
+                <span>$50.00</span>
+                <span id="price-display">$5000</span>
+              </div>
+              <input type="range" id="precioMax" min="50" max="5000" value="5000" style="width: 100%;">
+            </div>
+          <div class="filter-section">
+            <h3>Categorías</h3>
+            <ul class="filter-options">
+              <li><label><input type="checkbox" name="categoria" value="Hornos">Hornos</label></li>
+              <li><label><input type="checkbox" name="categoria" value="Microondas">Microondas</label></li>
+              <li><label><input type="checkbox" name="categoria" value="Licuadora">Licuadoras</label></li>
+              <li><label><input type="checkbox" name="categoria" value="Lavavajillas">Lavavajillas</label></li>
+              <li><label><input type="checkbox" name="categoria" value="Lavadora">Lavadoras</label></li>
+              <li><label><input type="checkbox" name="categoria" value="Cocina">Cocinas</label></li>
+              <li><label><input type="checkbox" name="categoria" value="Refrigeradora">Refrigeradoras</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-section">
+            <h3>Marcas</h3>
+            <ul class="filter-options">
+              <li><label><input type="checkbox" name="marca" value="Whirlpool">Whirlpool</label></li>
+              <li><label><input type="checkbox" name="marca" value="Samsung">Samsung</label></li>
+              <li><label><input type="checkbox" name="marca" value="Durabrand">Durabrand</label></li>
+              <li><label><input type="checkbox" name="marca" value="BlackDecker">Black & Decker</label></li>
+              <li><label><input type="checkbox" name="marca" value="Nutribullet">Nutribullet</label></li>
+              <li><label><input type="checkbox" name="marca" value="Frigidaire">Frigidaire</label></li>
+              <li><label><input type="checkbox" name="marca" value="LG">LG</label></li>
+            </ul>
+          </div>
+          
+         
+            
+          <div class="filter-section">
+              <h3>Color</h3>
+              <ul class="filter-options">
+                <li><label><input type="checkbox" name="color" value="Negro">Negro</label></li>
+                <li><label><input type="checkbox" name="color" value="Blanco">Blanco</label></li>
+                <li><label><input type="checkbox" name="color" value="Gris">Gris</label></li>
+              </ul>
+            </div>
+        </form>
+      </aside>
+
+      <!-- Contenido principal -->
+      <mai n class="main-content">
+        <h1 class="category-title">Linea Blanca</h1>
+
+        <div class="results-info" id="info-resultados">
+          <span id="productos-mostrando">Mostrando 1-10 de 100 productos</span> |
+          Ordenar por:
+          <select class="sort-options">
+            <option value="popular">Más populares</option>
+            <option value="price-asc">Precio (menor a mayor)</option>
+            <option value="price-desc">Precio (mayor a menor)</option>
+            <option value="newest">Novedades</option>
+        </select>
+        </div>
+         <button id="toggle-filters" aria-label="Mostrar filtros">
+  🧰 Filtros
+</button>
+        
+
+        <div class="products-grid" id="lineaBlanca-container" >
+          <!-- Producto 1 -->
+          <div class="product-card" data-precio="94.54" data-color="Blanco" data-categoria="Microondas" data-marca="Durabrand" data-date="2023-06-15" data-popularity="120">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/MicroondasDurabrandBlanco.png" alt="Microondas Durabrand Blanco" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Microondas Durabrand Blanco</h3>
+              <div class="product-price">
+                <span class="old-price">$105.05</span>
+                <span>$94.54</span>
+                <span class="discount">10%</span>
+              </div>
+            </div>
+          </div>
+
+      
+          <!-- Producto 2 -->
+          <div class="product-card" data-precio="1000" data-color="Gris" data-color="Gris" data-categoria="Cocina" data-marca="Frigidaire" data-tamano="Grande" data-date="2023-06-15" data-popularity="120">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/CocinaFrigidaire.png" alt="Cocina a Gas Frigidaire" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cocina a Gas Frigidaire</h3>
+              <div class="product-price">$259</div>
+            </div>
+          </div>
+      
+          
+          <!-- Producto 3 -->
+          <div class="product-card" data-precio="83.50" data-color="Negro" data-categoria="Microondas" data-marca="Durabrand" data-date="2023-07-20" data-popularity="90">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/MicroondasDurabrandNegro.png" alt="Microondas Durabrand Digital Negro - 1.1Pie" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Microondas Durabrand Digital Negro - 1.1Pie</h3>
+              <div class="product-price">$83.50</div>
+            </div>
+          </div>
+
+      
+          <!-- Producto 4 -->
+          <div class="product-card" data-precio="499" data-color="Gris" data-categoria="Cocina" data-marca="Samsung" data-tamano="Grande" data-date="2023-04-10" data-popularity="180">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/CocinaSamsung.png" alt="Cocina a Gas Samsung" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cocina a Gas Samsung</h3>
+              <div class="product-price">$499</div>
+            </div>
+          </div>
+      
+        <!-- Producto 5 -->
+          <div class="product-card" data-precio="149" data-categoria="Microondas" data-color="Gris" data-marca="Whirlpool" data-date="2023-04-10" data-popularity="180">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/MicroondasWhirlpoolGris.png" alt="Microondas Whirlpool 1.4 ft Plateado" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Microondas Whirlpool 1.4Pie Plateado</h3>
+              <div class="product-price">
+                <span class="old-price">$180</span>
+                <span>$149.00</span>
+                <span class="discount">17%</span>
+              </div>
+            </div>
+          </div>
+
+      
+          <!--  6-->
+          <div class="product-card" data-precio="231.01" data-color="Blanco" data-categoria="Cocina" data-marca="Whirlpool" data-tamano="Mediano" data-date="2023-09-12" data-popularity="85">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/CocinaWhirlpool.png" alt="Cocina de Gas Whirlpool" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cocina de Gas Whirlpool</h3>
+              <div class="product-price">
+                <div class="product-price">$231.01</div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Producto 7 -->
+          <div class="product-card" data-precio="55" data-categoria="Hornos" data-color="Negro" data-marca="Durabrand" data-date="2023-08-05" data-popularity="110">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/HornoDurabrandNegro.png" alt="Durabrand Horno Tostador 4 Rebanadas" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Durabrand Horno Tostador 4 Rebanadas</h3>
+              <div class="product-price">
+                <div class="product-price">$55.00</div>
+              </div>
+            </div>
+          </div>
+
+      
+          <!-- Product0 8 -->
+          <div class="product-card" data-precio="867.07" data-color="Blanco" data-categoria="Lavadora" data-marca="LG" data-tamano="Mediano" data-date="2023-10-01" data-popularity="95">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavadoraElectrolux.png" alt="Lavadora Electrolux" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavadora Electrolux</h3>
+              <div class="product-price">
+                <span class="old-price">$867.07</span>
+                <span>$780.36</span>
+                <span class="discount">10%</span>
+              </div>
+            </div>
+          </div>
+      
+          <!--Producto 9-->
+          <div class="product-card" data-precio="75.99" data-categoria="Microondas" data-color="Negro" data-marca="Samsung" data-date="2023-09-12" data-popularity="85">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/MicroondasSamsungNegro.png" alt="Samsung Microondas 11 Acero" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Samsung Microondas 11 Acero</h3>
+              <div class="product-price">$75.99</div>
+            </div>
+          </div>
+
+      
+          <!-- Producto 10-->
+          <div class="product-card" data-precio="449" data-color="Blanco" data-categoria="Lavadora" data-marca="Mabe" data-tamano="Mediano" data-date="2023-11-15" data-popularity="130">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavadoraFrigidaire.png" alt="Lavadora Frigidaire" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavadora Frigidaire</h3>
+              <div class="product-price">$449</div>
+            </div>
+          </div>
+      
+          <!-- producto 11 -->
+          <div class="product-card" data-precio="89.00" data-categoria="Microondas" data-color="Negro"  data-marca="Whirlpool" data-date="2023-03-25" data-popularity="70">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/MicroondasWhirlpoolNegro.png" alt="Microondas Whirlpool WM1807B 0.7 ft3 Negro" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Microondas Whirlpool Negro</h3>
+              <div class="product-price">
+                <span class="old-price">$100</span>
+                <span>$89.00</span>
+                <span class="discount">11%</span>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Producto 12-->
+          <div class="product-card" data-precio="2442.31" data-color="Gris" data-categoria="Refrigeradora" data-marca="Whirlpool" data-tamano="Grande" data-date="2023-11-15" data-popularity="130">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/RefrigeradoraWhirlpool.png" alt="Refrigeradora Whirlpool French Door 556L" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Refrigeradora Whirlpool French Door 556L</h3>
+              <div class="product-price">$2442.31</div>
+            </div>
+          </div>
+      
+          <!-- Product0 13 -->
+          <div class="product-card" data-precio="99" data-categoria="Hornos" data-color="Negro" data-marca="BlackDecker" data-date="2023-10-01" data-popularity="95">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/TostadorB_DNegro.png" alt="Black And Decker Horno Tostador 6 Rebanada" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Black & Decker Horno Tostador 6 Rebanada color Negro</h3>
+              <div class="product-price">
+                <span class="old-price">$125</span>
+                <span>$99.00</span>
+                <span class="discount">21%</span>
+              </div>
+            </div>
+          </div>
+
+      
+          <!-- Producto 14 -->
+          <div class="product-card" data-precio="2706.92" data-color="Blanco" data-categoria="Electrodoméstico" data-marca="LG" data-tamano="Pequeño" data-date="2023-09-01" data-popularity="100">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavadoraGE.png" alt="Lavadora GE" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavadora GE</h3>
+              <div class="product-price">$2706.92</div>
+            </div>
+          </div>
+      
+          <!-- Producto 15 -->
+          <div class="product-card" data-precio="129" data-categoria="Hornos" data-color="Gris" data-marca="BlackDecker" data-date="2023-02-18" data-popularity="60">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/TostadorBDGris.png" alt="Horno tostador de pan Black Decker capacidad 8 rebanadas" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Horno tostador de pan Black & Decker capacidad 8 rebanadas</h3>
+              <div class="product-price">$129</div>
+            </div>
+          </div>
+      
+          <!-- Producto 16-->
+          <div class="product-card" data-precio="1000" data-color="Negro" data-categoria="Lavadora" data-marca="LG" data-tamano="Grande" data-date="2023-04-05" data-popularity="125">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavadoraLG.png" alt="Lavadora LG" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavadora LG</h3>
+              <div class="product-price">$1952.02</div>
+            </div>
+          </div>
+      
+          <!-- Producto 17 -->
+          <div class="product-card" data-precio="101.92" data-categoria="Licuadora" data-color="Gris" data-marca="Nutribullet" data-tamano="Mediano" data-date="2023-01-10" data-popularity="55">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LicuadoraNutribulletGris.png" alt="Licuadora Nutribullet 900Watts 1.33litros" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Licuadora Nutribullet 900Watts 1.33litros</h3>
+              <div class="product-price">$101.92</div>
+            </div>
+          </div>
+
+      
+          <!-- Producto 18 -->
+          <div class="product-card" data-precio="456.21" data-color="Blanco" data-categoria="Lavadora" data-marca="Whirlpool" data-tamano="Grande" data-date="2023-07-05" data-popularity="80">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavadoraWhirlpool.png" alt="Lavadora Whirlpool" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavadora Whirlpool</h3>
+              <div class="product-price">$456.21</div>
+            </div>
+          </div>
+      
+          <!-- Producto 19 -->
+          <div class="product-card" data-precio="258.36" data-categoria="Licuadora" data-color="Gris" data-marca="Nutribullet" data-tamano="Grande" data-date="2023-05-22" data-popularity="115">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LicuadoraVasoNutribulletGris.png" alt="Licuadora de jarra batidora de Gris 1.8 litros" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Licuadora de jarra batidora de Gris 1.8 litros</h3>
+              <div class="product-price">258.36</div>
+            </div>
+          </div>
+
+          <!-- Producto 20 -->
+          <div class="product-card" data-precio="4955.63" data-categoria="Refrigeradora" data-color="Gris" data-marca="LG" data-tamano="Grande" data-date="2023-05-22" data-popularity="115">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/RefrigeradoraCafe.png" alt="Refrigeradora Gris" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Refrigeradora Café</h3>
+              <div class="product-price">$4955.63</div>
+            </div>
+          </div>
+
+          <!-- Producto 21 -->
+          <div class="product-card" data-precio="157.22" data-categoria="Licuadora" data-marca="Nutribullet" data-color="Negro" data-tamano="Pequeño" data-date="2023-09-01" data-popularity="100">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LicuadoraVasoNutribulletNegra.png" alt="Licuadora de jarra batidora de Negro 1.8 litros" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Licuadora de jarra batidora de Negro 1.8 litros</h3>
+              <div class="product-price">
+                <span class="old-price">$168.46</span>
+                <span>$157.22</span>
+                <span class="discount">20%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 22-->
+          <div class="product-card" data-precio="1,670.14" data-color="Gris" data-categoria="Refrigeradora" data-marca="Frigidaire" data-tamano="Mediano" data-date="2023-10-30" data-popularity="145">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/RefrigeradoraFrigidaire.png" alt="Refrigeradora Frigidaire" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Refrigeradora Frigidaire</h3>
+              <div class="product-price">$1,670.14</div>
+            </div>
+          </div>
+      
+          <!-- Producto 23 -->
+          <div class="product-card" data-precio="849" data-categoria="Lavavajillas" data-marca="Samsung" data-color="Blanco" data-date="2023-09-01" data-popularity="100">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavavajillasSamsungBlanca.png" alt="Lavavajillas Samsung smart bespoke 42dba storm wash +smart dry blanca" width="160">
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavavajillas Samsung blanco</h3>
+              <div class="product-price">
+                <span class="old-price">$969.00</span>
+                <span>$849.00</span>
+                <span class="discount">12%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 24-->
+          <div class="product-card" data-precio="2,862.85" data-color="Negro" data-categoria="Refrigeradora" data-marca="Samsung" data-tamano="Grande" data-date="2023-10-30" data-popularity="145">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/RefrigeradoraSamsung.png" alt="Refrigeradora Samsung Side by Side 27.5CF" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Refrigeradora Samsung Side by Side 27.5CF</h3>
+              <div class="product-price">$2,862.85</div>
+            </div>
+          </div>
+      
+          <!-- Producto 25 -->
+          <div class="product-card" data-precio="659" data-categoria="Lavavajillas" data-marca="Whirlpool" data-color="Gris" data-tamano="Pequeño" data-date="2023-09-01" data-popularity="100">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavavajillasWhirlpoolGris.png" alt="Lavavajillas Gris con 1 hora de ciclo de lavado" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavavajillas Gris con 1 hora de ciclo de lavado</h3>
+              <div class="product-price">$659.00</div>
+            </div>
+          </div>
+
+          <!-- Producto 26-->
+          <div class="product-card" data-precio="767.00" data-color="Negro" data-categoria="Cocina" data-marca="LG" data-tamano="Mediano" data-date="2023-10-30" data-popularity="145">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/CocinaElectric.png" alt="Cocina General Electric " width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cocina General Electric </h3>
+              <div class="product-price">$767.00</div>
+            </div>
+          </div>
+      
+          <!-- Producto 27 -->
+          <div class="product-card" data-precio="949" data-categoria="Lavavajillas" data-marca="Samsung" data-color="Gris" data-tamano="Pequeño" data-date="2023-09-01" data-popularity="100">
+            <div class="product-image">
+              <img src="../img/LineaBlanca/LavavajillasSamsungGris.png" alt="Lavavajillas Samsung bespoke StormWash+" width="160" >
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lavavajillas Samsung color Gris</h3>
+              <div class="product-price">$949.00</div>
+            </div>
+          </div>
+
+      </div>
+
+        <!-- Paginación -->
+        <div id="pagination" class="pagination">
+          <a href="#" id="prev">Anterior</a>
+
+          <a href="#" id="next">Siguiente</a>
+        </div>
+
+      </mai>
+    </div>
+
+    <!-- fpooter incluido x medio de ID -->
+    <div id="footer"></div>
+
+    <script src="/Js/animacion.js"></script>
+    <script src="/Js/duplicados.js"></script>
+    <script src="/Js/btn.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--LIBRERIA DE SWEET ALERT-->
+
+  </body>
+
+  </html>

@@ -1,0 +1,191 @@
+.tracking-section {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+.tracking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tracking-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.tracking-container .airplane {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  animation: avion-move 5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes avion-move {
+  0% {
+    transform: translateX(0);
+    transform: scale3d(1.05, 1.05, 1);
+  }
+  100% {
+    transform: translateX(10rem);
+  }
+}
+
+.order-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.tracking-progress {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  position: relative;
+}
+
+.tracking-progress::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ccc;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  background: #ccc;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.step.completed {
+  background: #27ae60;
+}
+
+.step.active {
+  background: #f39c12;
+}
+
+@media (max-width: 600px) {
+  .tracking-progress {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  .tracking-progress::before {
+    content: none; /* Oculta la línea horizontal */
+  }
+
+  .step {
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .step::before {
+    content: "•";
+    margin-right: 8px;
+    font-weight: bold;
+  }
+}
+
+.order-summary {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin: 40px auto;
+  border: 1px solid #eee;
+}
+
+.order-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.order-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.order-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-details img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.quantity,
+.price {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 2px 0;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  background: linear-gradient(45deg, #ff3e9d, #1f3dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-flow 4s ease infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .order-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-details img {
+    margin-bottom: 10px;
+  }
+
+  .total-price {
+    text-align: left;
+  }
+}

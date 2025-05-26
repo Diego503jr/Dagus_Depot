@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAGUS | Pago</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <!-- header incluido x medio de ID -->
+    <div id="header"></div>
+
+    <div class="checkout-container">
+        <h1>Finaliza tu compra</h1>
+
+        <form class="checkout-form">
+            <h2>Datos del cliente</h2>
+            <label>Nombre completo</label>
+            <input type="text">
+
+            <label>Correo electrónico</label>
+            <input type="email">
+
+            <label>Teléfono</label>
+            <input type="tel">
+
+            <label>Dirección de envío</label>
+            <textarea required></textarea>
+
+            <h2>Método de pago</h2>
+            <label><input type="radio" name="pago" value="tarjeta" checked> Tarjeta de crédito</label>
+            <label><input type="radio" name="pago" value="transferencia"> Transferencia bancaria</label>
+            <label><input type="radio" name="pago" value="entrega"> Pago contra entrega</label>
+            
+            <!-- Formulario: Tarjeta -->
+            <div id="form-tarjeta" class="formulario-pago">
+              <h3>Datos de la Tarjeta</h3>
+              <input type="text" placeholder="Número de tarjeta">
+              <input type="text" placeholder="Titular">
+              <input type="text" placeholder="MM/AA">
+              <input type="text" placeholder="CVV">
+            </div>
+            
+            <!-- Formulario: Transferencia -->
+            <div id="form-transferencia" class="formulario-pago" style="display: none;">
+              <h3>Instrucciones de Transferencia</h3>
+              <p>Realiza tu depósito a la cuenta: 1234567890 del banco XYZ.</p>
+            </div>
+            
+            <!-- Formulario: Contra entrega -->
+            <div id="form-entrega" class="formulario-pago" style="display: none;">
+              <h3>Pago al Recibir</h3>
+              <p>Recuerda tener el monto exacto al momento de la entrega.</p>
+            </div>
+            
+            <div class="resumen-final">
+                <h2>Resumen del Pedido</h2>
+                <p><strong>Productos:</strong> 3</p>
+                <p><strong>Subtotal:</strong> $16,646.00</p>
+                <p><strong>Descuento:</strong> -$1,664.60</p>
+                <p><strong>Envío:</strong> $199.00</p>
+                <p><strong>Total:</strong> <span style="color: green;">$15,180.40</span></p>
+            </div>
+
+            <button type="submit" class="checkout-btn" id="confirmarPedido">Confirmar Pedido</button>
+        </form>
+    </div>
+
+    <!-- footer incluido x medio de ID -->
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/Js/animacion.js"></script>
+    <script src="/Js/duplicados.js"></script>
+</body>
+
+</html>
