@@ -17,6 +17,7 @@
   <body>
     <!-- header incluido x medio de ID -->
     <div id="header"></div>
+    <div class="overlay"></div>
 
     <div class="container">
       <!-- Sidebar de filtros -->
@@ -226,6 +227,7 @@
               </ul>
             </div>
           </div>
+
           <div class="filter-section">
             <h3 class="collapsible">Definición de pantalla</h3>
             <div class="collapsible-content">
@@ -286,6 +288,9 @@
             <option value="newest">Novedades</option>
           </select>
         </div>
+        <button id="toggle-filters" aria-label="Mostrar filtros">
+          🧰 Filtros
+        </button>
 
         <div class="products-grid" id="products-container">
           <!-- Producto 1 -->
@@ -977,6 +982,7 @@
     <div id="footer"></div>
 
     <script src="../Js/animacion.js"></script>
+    <script src="../Js/btn.js"></script>
     <script src="../Js/duplicados.js"></script>
     <script src="../Js/filtrosHogar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

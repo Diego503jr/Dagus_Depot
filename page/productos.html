@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/lineaBlanca.css" />
+    <link rel="stylesheet" href="/movil/header.css" />
     <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
 
     <title>DAGUS | Productos</title>
@@ -18,6 +19,7 @@
   <body>
     <!-- header incluido x medio de ID -->
     <div id="header"></div>
+    <div class="overlay"></div>
 
     <div class="container">
       <!-- Sidebar de filtros -->
@@ -27,6 +29,24 @@
         <h2>Filtros</h2>
 
         <form action="productos.html" method="GET">
+          <div class="filter-section">
+            <h3 class="collapsible">Precio</h3>
+            <div class="collapsible-content">
+              <div class="price-range">
+                <span>$1.00</span>
+                <span id="price-display">$5,000</span>
+              </div>
+              <input
+                type="range"
+                id="precioMax"
+                min="1"
+                max="5000"
+                value="5000"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+
           <div class="filter-section">
             <h3 class="collapsible">Color</h3>
             <div class="collapsible-content">
@@ -92,24 +112,6 @@
                   >
                 </li>
               </ul>
-            </div>
-          </div>
-
-          <div class="filter-section">
-            <h3 class="collapsible">Precio</h3>
-            <div class="collapsible-content">
-              <div class="price-range">
-                <span>$1.00</span>
-                <span id="price-display">$5,000</span>
-              </div>
-              <input
-                type="range"
-                id="precioMax"
-                min="1"
-                max="5000"
-                value="5000"
-                style="width: 100%"
-              />
             </div>
           </div>
 
@@ -311,52 +313,6 @@
               <ul class="filter-options">
                 <li>
                   <label
-                    ><input type="checkbox" name="marca" value="HP" />HP</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="marca"
-                      value="RadioShack"
-                    />RadioShack</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="marca"
-                      value="Samsung"
-                    />Samsung</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" name="marca" value="LG" />LG</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="marca"
-                      value="Fujifilm"
-                    />Fujifilm</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="marca"
-                      value="Apple"
-                    />Apple</label
-                  >
-                </li>
-                <li>
-                  <label
                     ><input type="checkbox" name="marca" value="LG" />LG</label
                   >
                 </li>
@@ -498,110 +454,6 @@
               </ul>
             </div>
           </div>
-
-          <div class="filter-section">
-            <h3 class="collapsible">Definición de pantalla</h3>
-            <div class="collapsible-content">
-              <ul class="filter-options">
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="definicion"
-                      value="UHD 4K"
-                    />UHD 4K</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="definicion"
-                      value="FHD"
-                    />FHD</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="definicion"
-                      value="HD"
-                    />HD</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="definicion"
-                      value="4K"
-                    />4K</label
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- HOGAR -->
-          <!-- <h3>HOGAR</h3>
-
-          <div class="filter-section">
-            <h3 class="collapsible">Tamaños</h3>
-            <div class="collapsible-content">
-              <ul class="filter-options">
-                <li>
-                  <label
-                    ><input type="checkbox" name="tamano" value="Pequeño" />
-                    Pequeño</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" name="tamano" value="Mediano" />
-                    Mediano</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input type="checkbox" name="tamano" value="Grande" />
-                    Grande</label
-                  >
-                </li>
-                <li>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="tamano"
-                      value="Extra Grande"
-                    />
-                    Extra Grande</label
-                  >
-                </li>
-              </ul>
-            </div>
-          </div> -->
-
-          <!--TECNOLOGIA-->
-          <!-- <h3>TECNOLOGIA</h3>
-
-          <div class="filter-section">
-            <h4 class="collapsible">Capacidad</h4>
-            <div class="collapsible-content">
-              <label
-                ><input type="checkbox" name="capacidad" value="64 GB" /> 64
-                GB</label
-              ><br />
-              <label
-                ><input type="checkbox" name="capacidad" value="128 GB" /> 128
-                GB</label
-              ><br />
-              <label
-                ><input type="checkbox" name="capacidad" value="256 GB" /> 256
-                GB</label
-              >
-            </div>
-          </div> -->
         </form>
       </aside>
 
@@ -619,6 +471,9 @@
             <option value="newest">Novedades</option>
           </select>
         </div>
+        <button id="toggle-filters" aria-label="Mostrar filtros">
+          🧰 Filtros
+        </button>
 
         <div class="products-grid" id="products-container">
           <!--TV Y VIDEO-->
@@ -1924,7 +1779,6 @@
                 src="../img/tecnologia/airpods.png"
                 alt="AirPods Pro"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -1997,7 +1851,6 @@
                 src="../img/tecnologia/bocinaLGXBOOM.png"
                 alt="Bocina inalámbrica LG XBOOM Go"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2071,7 +1924,6 @@
                 src="../img/tecnologia/fujifilmMini90.png"
                 alt="Cámara digital instantánea Fujifilm Mini 90"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2096,7 +1948,6 @@
                 src="../img/tecnologia/fujifilmX100V.png"
                 alt="Cámara Fujifilm X100V"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2119,7 +1970,6 @@
                 src="../img/tecnologia/grabadoraRadioShack.png"
                 alt="Grabadora de voz RadioShack"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2166,7 +2016,6 @@
                 src="../img/tecnologia/hpProbook.png"
                 alt="Laptop HP ProBook 450"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2190,7 +2039,6 @@
                 src="../img/tecnologia/HpLaptopPc.png"
                 alt="Tablet HP 11-inch Tablet PC"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2213,7 +2061,6 @@
                 src="../img/tecnologia/InstaxMini11.png"
                 alt="Cámara Instax Mini 11"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2237,7 +2084,6 @@
                 src="../img/tecnologia/ipad-9gen.png"
                 alt="iPad 9ª Gen Apple"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2261,7 +2107,6 @@
                 src="../img/tecnologia/iphoneSE.png"
                 alt="iPhone SE 2022"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2285,7 +2130,6 @@
                 src="../img/tecnologia/Gram14LG.png"
                 alt="	Laptop LG Gram 14"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2309,7 +2153,6 @@
                 src="../img/tecnologia/laptopLG.png"
                 alt="Laptop LG UltraPC"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2333,7 +2176,6 @@
                 src="../img/tecnologia/MacMiniM1.png"
                 alt="Mac Mini Apple M1"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2360,7 +2202,6 @@
                 src="../img/tecnologia/microfonoRadioShack.png"
                 alt="Micrófono profesional RadioShack"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2406,7 +2247,6 @@
                 src="../img/tecnologia/samsungST200F.png"
                 alt="	Cámara compacta Samsung ST200F"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2429,7 +2269,6 @@
                 src="../img/tecnologia/samsungWB350F.png"
                 alt="Cámara digital Samsung WB350F"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2474,7 +2313,6 @@
                 src="../img/tecnologia/ssdRadioShack1TB.png"
                 alt="Disco externo RadioShack 1TB"
                 width="160"
-                class="custom-height-producto"
               />
             </div>
             <div class="product-info">
@@ -2497,7 +2335,6 @@
                 src="../img/tecnologia/ssdSamsung.png"
                 alt="Disco duro externo Samsung T7"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2597,7 +2434,6 @@
                 src="../img/LineaBlanca/CocinaFrigidaire.png"
                 alt="Cocina a Gas Frigidaire"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2647,7 +2483,6 @@
                 src="../img/LineaBlanca/CocinaSamsung.png"
                 alt="Cocina a Gas Samsung"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2699,7 +2534,6 @@
                 src="../img/LineaBlanca/CocinaWhirlpool.png"
                 alt="Cocina de Gas Whirlpool"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2751,7 +2585,6 @@
                 src="../img/LineaBlanca/LavadoraElectrolux.png"
                 alt="Lavadora Electrolux"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2803,7 +2636,6 @@
                 src="../img/LineaBlanca/LavadoraFrigidaire.png"
                 alt="Lavadora Frigidaire"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2855,7 +2687,6 @@
                 src="../img/LineaBlanca/RefrigeradoraWhirlpool.png"
                 alt="Refrigeradora Whirlpool French Door 556L"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2911,7 +2742,6 @@
                 src="../img/LineaBlanca/LavadoraGE.png"
                 alt="Lavadora GE"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -2985,7 +2815,6 @@
                 src="../img/LineaBlanca/LicuadoraNutribulletGris.png"
                 alt="Licuadora Nutribullet 900Watts 1.33litros"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3012,7 +2841,6 @@
                 src="../img/LineaBlanca/LavadoraWhirlpool.png"
                 alt="Lavadora Whirlpool"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3037,7 +2865,6 @@
                 src="../img/LineaBlanca/LicuadoraVasoNutribulletGris.png"
                 alt="Licuadora de jarra batidora de Gris 1.8 litros"
                 width="160"
-                class="custom-height-image"
               />
             </div>
             <div class="product-info">
@@ -3064,7 +2891,6 @@
                 src="../img/LineaBlanca/RefrigeradoraCafe.png"
                 alt="Refrigeradora Gris"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3089,7 +2915,6 @@
                 src="../img/LineaBlanca/LicuadoraVasoNutribulletNegra.png"
                 alt="Licuadora de jarra batidora de Negro 1.8 litros"
                 width="160"
-                class="custom-height-image"
               />
             </div>
             <div class="product-info">
@@ -3120,7 +2945,6 @@
                 src="../img/LineaBlanca/RefrigeradoraFrigidaire.png"
                 alt="Refrigeradora Frigidaire"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3144,7 +2968,6 @@
                 src="../img/LineaBlanca/LavavajillasSamsungBlanca.png"
                 alt="Lavavajillas Samsung smart bespoke 42dba storm wash +smart dry blanca"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3173,7 +2996,6 @@
                 src="../img/LineaBlanca/RefrigeradoraSamsung.png"
                 alt="Refrigeradora Samsung Side by Side 27.5CF"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3200,7 +3022,6 @@
                 src="../img/LineaBlanca/LavavajillasWhirlpoolGris.png"
                 alt="Lavavajillas Gris con 1 hora de ciclo de lavado"
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3227,7 +3048,6 @@
                 src="../img/LineaBlanca/CocinaElectric.png"
                 alt="Cocina General Electric "
                 width="160"
-                class="custom-height"
               />
             </div>
             <div class="product-info">
@@ -3252,7 +3072,6 @@
                 src="../img/LineaBlanca/LavavajillasSamsungGris.png"
                 alt="Lavavajillas Samsung bespoke StormWash+"
                 width="160"
-                class="custom-height-image"
               />
             </div>
             <div class="product-info">
@@ -3265,6 +3084,7 @@
         <!-- Paginación -->
         <div id="pagination" class="pagination">
           <a href="#" id="prev">Anterior</a>
+          <span id="page-numbers"></span>
 
           <a href="#" id="next">Siguiente</a>
         </div>
@@ -3276,8 +3096,8 @@
 
     <script src="../Js/animacion.js"></script>
     <script src="../Js/duplicados.js"></script>
+    <script src="../Js/btn.js"></script>
     <script src="../Js/filtrosHogar.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--LIBRERIA DE SWEET ALERT-->
   </body>

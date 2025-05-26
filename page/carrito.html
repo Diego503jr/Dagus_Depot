@@ -1,126 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DAGUS | Carrito</title>
-  <link rel="icon" href="../img/flavicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAGUS | Carrito</title>
+    <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../movil/header.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header incluido x medio de ID -->
+    <div id="header" class="active"></div>
 
-</head>
-<body>
-  <!-- header incluido x medio de ID -->
-  <div id="header" class="active"></div>
-  
-  <div class="cart-container">
-    <div class="breadcrumb">
+    <div class="cart-container">
+      <div class="breadcrumb">
         <span>Inicio > Carrito</span>
-    </div>
+      </div>
 
-    <div class="cart-header">
+      <div class="cart-header">
         <h1 class="cart-title">TU CARRITO</h1>
         <span class="your-cart">3 productos</span>
-    </div>
-    
-    <div class="cart-items">
+      </div>
+
+      <div class="cart-items">
         <!-- Producto 1 -->
         <div class="cart-item">
-            <div class="item-image">
-                <img src="../img/productos/laptop.jpg" alt="Laptop HP">
+          <div class="item-image">
+            <img src="../img/productos/laptop.jpg" alt="Laptop HP" />
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Laptop HP 15.6" Ryzen 5</h3>
+            <div class="item-attributes">
+              <span class="item-size">RAM: 16 GB</span>
+              <span class="item-color">Color: Plateado</span>
             </div>
-            <div class="item-details">
-                <h3 class="item-name">Laptop HP 15.6" Ryzen 5</h3>
-                <div class="item-attributes">
-                    <span class="item-size">RAM: 16 GB</span>
-                    <span class="item-color">Color: Plateado</span>
-                </div>
-                <div class="item-quantity">
-                    <button class="quantity-btn">-</button>
-                    <span>1</span>
-                    <button class="quantity-btn">+</button>
-                </div>
+            <div class="item-quantity">
+              <button class="quantity-btn">-</button>
+              <span>1</span>
+              <button class="quantity-btn">+</button>
             </div>
-            <div class="item-price">$13,499.00</div>
+          </div>
+          <div class="item-price">$13,499.00</div>
         </div>
-    
+
         <!-- Producto 2 -->
         <div class="cart-item">
-            <div class="item-image">
-                <img src="../img/" alt="Lavadora Lg">
+          <div class="item-image">
+            <img src="../img/" alt="Lavadora Lg" />
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Lavadora LG</h3>
+            <div class="item-attributes">
+              <span class="item-size">Capacidad: 25lb</span>
+              <span class="item-color">Color: Blanco</span>
             </div>
-            <div class="item-details">
-                <h3 class="item-name">Lavadora LG</h3>
-                <div class="item-attributes">
-                    <span class="item-size">Capacidad: 25lb</span>
-                    <span class="item-color">Color: Blanco</span>
-                </div>
-                <div class="item-quantity">
-                    <button class="quantity-btn">-</button>
-                    <span>2</span>
-                    <button class="quantity-btn">+</button>
-                </div>
+            <div class="item-quantity">
+              <button class="quantity-btn">-</button>
+              <span>2</span>
+              <button class="quantity-btn">+</button>
             </div>
-            <div class="item-price">$1,299.00</div>
+          </div>
+          <div class="item-price">$1,299.00</div>
         </div>
-    
+
         <!-- Producto 3 -->
         <div class="cart-item">
-            <div class="item-image">
-                <img src="../img/productos/mouse-gamer.jpg" alt="Mouse Gamer RGB">
+          <div class="item-image">
+            <img src="../img/productos/mouse-gamer.jpg" alt="Mouse Gamer RGB" />
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Mouse Gamer Logitech G203 RGB</h3>
+            <div class="item-attributes">
+              <span class="item-size">DPI: 8000</span>
+              <span class="item-color">Color: Negro</span>
             </div>
-            <div class="item-details">
-                <h3 class="item-name">Mouse Gamer Logitech G203 RGB</h3>
-                <div class="item-attributes">
-                    <span class="item-size">DPI: 8000</span>
-                    <span class="item-color">Color: Negro</span>
-                </div>
-                <div class="item-quantity">
-                    <button class="quantity-btn">-</button>
-                    <span>1</span>
-                    <button class="quantity-btn">+</button>
-                </div>
+            <div class="item-quantity">
+              <button class="quantity-btn">-</button>
+              <span>1</span>
+              <button class="quantity-btn">+</button>
             </div>
-            <div class="item-price">$549.00</div>
+          </div>
+          <div class="item-price">$549.00</div>
         </div>
-    </div>
-    
-    <div class="order-summary">
+      </div>
+
+      <div class="order-summary">
         <h2>Resumen del Pedido</h2>
-        
+
         <div class="summary-row">
-            <span>Subtotal</span>
-            <span>$16,646.00</span>
+          <span>Subtotal</span>
+          <span>$16,646.00</span>
         </div>
         <div class="summary-row discount">
-            <span>Descuento (-10%)</span>
-            <span>-$1,664.60</span>
+          <span>Descuento (-10%)</span>
+          <span>-$1,664.60</span>
         </div>
         <div class="summary-row">
-            <span>Costo de envío</span>
-            <span>$199.00</span>
+          <span>Costo de envío</span>
+          <span>$199.00</span>
         </div>
-        
+
         <div class="summary-total">
-            <span>Total</span>
-            <span>$15,180.40</span>
+          <span>Total</span>
+          <span>$15,180.40</span>
         </div>
-        
+
         <div class="promo-code">
-            <input type="text" placeholder="Agregar código promocional">
-            <button>Aplicar</button>
+          <input type="text" placeholder="Agregar código promocional" />
+          <button>Aplicar</button>
         </div>
-        <a href="pago.html"> <button class="checkout-btn">Proceder al Pago →</button></a>
+        <a href="pago.html">
+          <button class="checkout-btn">Proceder al Pago →</button></a
+        >
+      </div>
     </div>
-</div>
-    
 
-  <!-- footer incluido x medio de ID -->
-  <div id="footer"></div>
+    <!-- footer incluido x medio de ID -->
+    <div id="footer"></div>
 
-  <script src="/Js/animacion.js"></script>
-  <script src="/Js/duplicados.js"></script>
-</body>
+    <script src="/Js/animacion.js"></script>
+    <script src="/Js/duplicados.js"></script>
+  </body>
 </html>
