@@ -1,0 +1,93 @@
+
+.nosotros-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+}
+
+.nosotros-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.nosotros-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.12), 0 1.5px 4px rgba(44, 62, 80, 0.10);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  transition: box-shadow 0.2s;
+  border-left: 8px solid #4f46e5;
+}
+
+.nosotros-section.mission-vision {
+  border-left-color: #4f46e5;
+}
+
+.nosotros-section.about-us {
+  border-left-color: #4f46e5;
+  }
+
+.nosotros-section:hover {
+  box-shadow: 0 12px 32px  rgba(111, 0, 255, 0.18), 0 3px 8px rgba(44, 62, 80, 0.13);
+}
+
+h2 {
+  color: #000000;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-content p {
+  color: #374151;
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .mission-vision-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.mission-vision-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mission-vision-row .nosotros-section {
+  flex: 1 1 0;
+  min-width: 250px;
+}
+.guides-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.enlaces-externos{
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nosotros-section h2 {
+    color: #000000;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nosotros-section h2 i {
+    color: #007bff;
+}
