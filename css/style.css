@@ -773,6 +773,8 @@ header,
   background: #333;
 }
 
+/* ESTILOS DE FORMULARIOS */
+
 /*ESTILOS PAGO*/
 .formulario-pago {
   margin-top: 20px;
@@ -862,6 +864,11 @@ header,
 
 .checkout-btn:hover {
   background-color: #1e8e4d;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 /* Estilos del Footer */

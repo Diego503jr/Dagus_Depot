@@ -355,53 +355,6 @@ document.addEventListener("DOMContentLoaded", () => {
   filtrarProductos();
 });
 
-//FUNCION PARA EL PGO
-document
-  .querySelector(".checkout-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("¡Gracias por tu compra! Recibirás un correo de confirmación.");
-    // Redirigir o limpiar campos
-  });
-
-//FUNCION PARA METODO DE PAGO (PAGO.HTMLl)
-const radios = document.querySelectorAll('input[name="pago"]');
-
-radios.forEach((radio) => {
-  radio.addEventListener("change", () => {
-    document.getElementById("form-tarjeta").style.display = "none";
-    document.getElementById("form-transferencia").style.display = "none";
-    document.getElementById("form-entrega").style.display = "none";
-
-    if (radio.value === "tarjeta") {
-      document.getElementById("form-tarjeta").style.display = "block";
-    } else if (radio.value === "transferencia") {
-      document.getElementById("form-transferencia").style.display = "block";
-    } else if (radio.value === "entrega") {
-      document.getElementById("form-entrega").style.display = "block";
-    }
-  });
-});
-
-//ALERTA PARA BTN CONFIRMAR PEDIDO (PAGO.HTML)
-document
-  .getElementById("confirmarPedido")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    Swal.fire({
-      title: "¡Pedido confirmado!",
-      text: "Gracias por tu compra. Serás redirigido al inicio.",
-      icon: "success",
-      confirmButtonText: "Aceptar",
-      confirmButtonColor: "#27ae60",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.location.href = "index.html";
-      }
-    });
-  });
-
 const totalPages = 12; // Cambia según cuántas páginas tengas
 let currentPage = 1;
 
