@@ -25,25 +25,29 @@
     <div class="contact-main">
         <div class="contact-form-card">
             <h2>Envíanos Un Mensaje</h2>
-            <form>
+            <form id="contactForm" onsubmit="return validateForm(event)">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" required>
+                        <input type="text" id="nombre" pattern="[A-Za-z\s]+" title="Solo letras y espacios" required>
+                        <span class="error-message" id="nombreError"></span>
                     </div>
                     <div class="form-group">
                         <label>Apellido</label>
-                        <input type="text" required>
+                        <input type="text" id="apellido" pattern="[A-Za-z\s]+" title="Solo letras y espacios" required>
+                        <span class="error-message" id="apellidoError"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Número de teléfono</label>
-                        <input type="tel" required>
+                        <input type="tel" id="telefono" pattern="[0-9]{8}" title="Debe contener exactamente 8 números" required>
+                        <span class="error-message" id="telefonoError"></span>
                     </div>
                     <div class="form-group">
                         <label>Correo electrónico</label>
-                        <input type="email" required>
+                        <input type="email" id="email" required>
+                        <span class="error-message" id="emailError"></span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -91,18 +95,19 @@
             <div class="contact-social">
                 <h3>Síguenos en redes sociales</h3>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/accounts/login/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/login" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/login" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <!-- footer incluido x medio de ID -->
     <div id="footer"></div>
-    <script src="/Js/animacion.js"></script>
-    <script src="/Js/duplicados.js"></script>
+    <script src="../Js/animacion.js"></script>
+    <script src="../Js/duplicados.js"></script>
+    <script src="../Js/validacionContacto.js"></script>
 </body>
 
 </html>
