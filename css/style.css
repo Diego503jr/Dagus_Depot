@@ -383,6 +383,27 @@ header,
   gap: 20px;
 }
 
+/* Estios del carrusel */
+.carousel-custom-size {
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.carousel-custom-size .carousel-inner img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
 /* Sidebar de filtros */
 .filters-sidebar {
   width: 250px;
