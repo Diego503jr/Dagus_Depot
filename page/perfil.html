@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DAGUS depot</title>
+    <title>DAGUS | Perfil</title>
     <link rel="icon" href="../img/flavicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/perfil.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
   </head>
+
   <body>
     <!-- header incluido x medio de ID -->
     <div id="header" class="active"></div>
@@ -38,43 +26,24 @@
         <form class="profile-form">
           <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Tu nombre"
-            />
+            <input type="text" placeholder="Ulises" required />
           </div>
           <div class="form-group">
             <label for="apellido">Apellido</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              placeholder="Tu apellido"
-            />
+            <input type="text" placeholder="Rivera" required />
           </div>
           <div class="form-group">
             <label for="correo">Correo electrónico</label>
-            <input
-              type="email"
-              id="correo"
-              name="correo"
-              placeholder="correo@ejemplo.com"
-            />
+            <input type="email" placeholder="uliRiver31@gmail.com" required />
           </div>
           <div class="form-group">
             <label for="clave">Contraseña</label>
-            <input
-              type="password"
-              id="clave"
-              name="clave"
-              placeholder="••••••••"
-            />
+            <input type="password" placeholder="••••••••" required min="8" />
           </div>
-
           <div class="button-group">
-            <button type="submit" class="btn guardar">Guardar</button>
+            <button class="btn guardar" id="actualizarPerfil" disabled>
+              Guardar
+            </button>
             <button type="reset" class="btn cancelar">Cancelar</button>
           </div>
         </form>
@@ -83,7 +52,9 @@
 
     <div id="footer"></div>
 
-    <script src="/Js/animacion.js"></script>
-    <script src="/Js/duplicados.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../Js/animacion.js"></script>
+    <script src="../Js/duplicados.js"></script>
+    <script src="../Js/perfil.js"></script>
   </body>
 </html>

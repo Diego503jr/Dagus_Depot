@@ -73,6 +73,7 @@ form .form-row {
     flex: 1;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .form-group label {
@@ -85,38 +86,93 @@ form .form-row {
 .form-group input,
 .form-group textarea {
     background: #f3f3f3;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 10px;
     padding: 13px 15px;
     font-size: 1rem;
     color: #222;
     margin-bottom: 0;
     outline: none;
-    transition: box-shadow 0.2s;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     box-shadow: 0 0 0 2px #2d5fff33;
+    border-color: #2d5fff;
 }
 
-form button[type=\"submit\"] {
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #2d5fff;
+    background-color: #fff5f5;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.form-group input:invalid:not(:placeholder-shown) + .error-message,
+.form-group textarea:invalid:not(:placeholder-shown) + .error-message {
+    display: block;
+}
+
+/* Estilo para el placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+form button[type="submit"] {
     margin-top: 18px;
     width: 100%;
-    background: #2d5fff;
+    background: linear-gradient(135deg, #2d5fff 0%, #0a1d56 100%);
     color: #fff;
     border: none;
     border-radius: 10px;
-    padding: 14px 0;
+    padding: 16px 0;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
     letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(45, 95, 255, 0.2);
 }
 
-form button[type=\"submit\"]:hover {
-    background: #0a1d56;
+form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 95, 255, 0.3);
+    background: linear-gradient(135deg, #0a1d56 0%, #2d5fff 100%);
+}
+
+form button[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(45, 95, 255, 0.2);
+}
+
+form button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+form button[type="submit"]:hover::after {
+    left: 100%;
 }
 
 .contact-info-card {
@@ -170,10 +226,143 @@ form button[type=\"submit\"]:hover {
         flex-direction: column;
         gap: 32px;
         margin-top: -40px;
+        padding: 0 16px 32px 16px;
     }
     .contact-form-card, .contact-info-card {
         min-width: 0;
         width: 100%;
+        padding: 24px 20px;
+    }
+    .contact-form-card h2,
+    .contact-info-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+    form .form-row {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .form-group {
+        width: 100%;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+    .info-block {
+        padding: 16px;
+    }
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .info-block strong {
+        font-size: 1rem;
+    }
+    .info-block p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-hero {
+        padding: 32px 0 24px 0;
+    }
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    .breadcrumb {
+        font-size: 0.9rem;
+    }
+    .contact-main {
+        margin-top: -30px;
+    }
+    .contact-form-card, .contact-info-card {
+        padding: 20px 16px;
+    }
+    .contact-form-card h2,
+    .contact-info-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    form button[type="submit"] {
+        padding: 14px 0;
+        font-size: 1rem;
+    }
+    .contact-extra {
+        padding: 0 16px 32px 16px;
+    }
+    .contact-map {
+        height: 200px;
+    }
+    .contact-social {
+        padding: 24px 16px;
+    }
+    .contact-social h3 {
+        font-size: 1.2rem;
+    }
+    .social-icons {
+        gap: 12px;
+    }
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .success-message {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        padding: 16px;
+    }
+    .success-content i {
+        font-size: 36px;
+    }
+    .success-content h3 {
+        font-size: 18px;
+    }
+    .success-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .error-message {
+        font-size: 0.8rem;
+    }
+    .info-block {
+        padding: 12px;
+    }
+    .info-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact-main {
+        max-width: 1400px;
+    }
+    .contact-extra {
+        max-width: 1400px;
+    }
+    .contact-form-card, .contact-info-card {
+        padding: 48px 40px;
     }
 }
 
@@ -253,16 +442,60 @@ form button[type=\"submit\"]:hover {
     transform: translateY(-3px) scale(1.08);
 }
 
-@media (max-width: 900px) {
-    .contact-extra-content {
-        flex-direction: column;
-        gap: 24px;
+/* Estilos para el mensaje de éxito */
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-content i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.success-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.success-content p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
     }
-    .contact-map, .contact-social {
-        width: 100%;
-        min-width: 0;
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
-    .contact-map {
-        height: 220px;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
